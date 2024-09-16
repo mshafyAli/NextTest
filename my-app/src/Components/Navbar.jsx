@@ -35,13 +35,13 @@ const Navbar = ({ aboutRef, contactRef }) => {
     }
   };
 
-  const scrollToAbout = () => {
-    if (aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    // Update the URL without reloading the page
-    router.push("/about-us");
-  };
+  // const scrollToAbout = () => {
+  //   if (aboutRef.current) {
+  //     aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   // Update the URL without reloading the page
+  //   router.push("/about-us");
+  // };
 
   const scrollToContactUs = () => {
     if (contactRef.current) {
@@ -75,7 +75,10 @@ const Navbar = ({ aboutRef, contactRef }) => {
             <h1 className="font-bold">Home</h1>
           </Link>
 
-          <a onClick={scrollToAbout}>
+          <a  href="/about-us" onClick={(e) => {
+                e.preventDefault(); // Prevent default link behavior
+                router.push("/about-us"); // Change URL
+              }}>
             <h1 className="cursor-pointer font-bold">About</h1>
           </a>
 

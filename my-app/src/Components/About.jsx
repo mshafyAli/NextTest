@@ -1,6 +1,8 @@
 import { IoLogoWhatsapp } from "react-icons/io";
 import { TalkBtn } from './TalkBtn';
 import Image from "next/image";
+
+
 const About = ({aboutRef}) => {
   
  

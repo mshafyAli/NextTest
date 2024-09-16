@@ -1,6 +1,7 @@
 import { IoLogoWhatsapp } from "react-icons/io";
 import { IoStarSharp, IoStarHalfOutline } from "react-icons/io5";
 import { LuSunMedium } from "react-icons/lu";
+import { BiMessageRoundedDots } from "react-icons/bi";
 // import featureline from "../assets/featureline.png";
 import SignUp from "./SignUp";
 import { TalkBtn } from "./TalkBtn";
@@ -11,7 +12,7 @@ const Banner = () => {
 
 
   return (
-    <div className="bg-[#010621] w-full">
+    <div className="bg-cover bg-center bg-[#010621] w-full h-screen" style={{backgroundImage:'url(/bgbanner.png)'}}>
       <div className="bg-banner-bg bg-cover bg-center h-auto w-full">
         <div className="md:w-[80%]  max-w-7xl mx-auto px-4 py-12">
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-20">
@@ -33,7 +34,7 @@ const Banner = () => {
               </p>
               
               <div className="flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto md:hidden -mb-6 -mt-6">
-              <TalkBtn/>
+              <TalkBtn width="w-full" mdWidth="w-[230px]" bgColor="#ffb800" />
                 <a
                   href={`https://wa.me/447397145697?text=${encodeURIComponent(
                     "Hello Team Academians, I want to avail my promo code TA-OFF50."

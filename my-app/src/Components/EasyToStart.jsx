@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const EasyToStart = () => {
   return (
-    <div className="w-full max-w-6xl h-auto mx-auto mt-10 px-4">
+    <div className="w-full max-w-6xl h-auto mx-auto mt-20 px-4">
     
     <h1 className="text-[#5A5A5A] text-3xl md:text-6xl text-center font-bold pb-10 py-2">
         EASY TO START
