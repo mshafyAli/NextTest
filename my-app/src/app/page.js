@@ -1,5 +1,7 @@
 import About from '@/Components/About'
 import Banner from '@/Components/Banner'
+import EasyToStart from '@/Components/EasyToStart'
+import Services from '@/Components/Services'
 import React from 'react'
 
 const Home = () => {
@@ -7,6 +9,10 @@ const Home = () => {
     <div>
       <Banner/>
       <About/>
+      <Services/>
+      <EasyToStart/>
+
+      
     </div>
   )
 }

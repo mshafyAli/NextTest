@@ -4,9 +4,9 @@ import { CgMail } from "react-icons/cg";
 
 const Head = () => {
   return (
-    <div className="bg-white w-full h-12">
-      <div className="w-[80%] mx-auto">
-        <div className=" flex justify-between items-center py-4">
+    <div className="bg-white w-full h-10">
+      <div className="w-[90%] mx-auto">
+        <div className=" flex justify-center gap-20 items-center py-6">
     
 
            <div className="flex items-center gap-2">
