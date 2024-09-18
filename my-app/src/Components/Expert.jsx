@@ -98,7 +98,7 @@ const settings = {
   autoplay: true,
   swipeToSlide: true,
   draggable: true,
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 1,
   autoplaySpeed: 3000,
   dots: false,
@@ -107,7 +107,7 @@ const settings = {
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
       },
     },
@@ -130,7 +130,7 @@ const settings = {
 
 const Expert = () => {
   return (
-    <div className="w-[90%] mx-auto mt-12">
+    <div className="md:w-[75%] w-[90%] mx-auto mt-12">
       <h1 className="text-[#5A5A5A] text-3xl md:text-6xl text-center font-bold pb-10 py-2">
          MEET OUR EXPERTS
       </h1>
@@ -138,9 +138,9 @@ const Expert = () => {
         {expertsData.map((expert, index) => (
           <div
             key={index}
-            className="bg-[#F3F9FD] w-[320px] h-auto rounded-xl border border-gray-300"
+            className="bg-[#F3F9FD]  h-auto rounded-xl border border-gray-300"
           >
-            <div className="flex items-center justify-center gap-4 px-4 py-2">
+            <div className="flex items-center justify-center gap-6 px-4 py-2">
               <Image
                 src={expert.image}
                 alt={expert.name}
@@ -163,7 +163,7 @@ const Expert = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[90%] bg-[#001E36] h-[2px] mx-4"></div>
+           <div className="w-[80%] bg-[#001E36] h-[2px] mx-10"></div>
             <div className="flex items-center justify-center gap-4 mt-4">
               <div>
                 <h1 className="text-[#001E36] text-center font-bold">
@@ -178,7 +178,7 @@ const Expert = () => {
                 <h2 className="text-[#007285] text-base">Customer Reviews</h2>
               </div>
             </div>
-            <div className="w-[90%] bg-[#001E36] h-[1px] mx-4 my-2 "></div>
+            <div className="w-[80%] bg-[#001E36] h-[1px] mx-10 my-2 "></div>
             <div className="flex items-center justify-center gap-20 pb-4">
               <div>
                 <h1 className="text-[#007285] font-bold text-center text-xl">

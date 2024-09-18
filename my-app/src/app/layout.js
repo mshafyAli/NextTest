@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         className={inter.className}
       >
         <Head/>
-       
+        
         {children}
         <TawkToComponent/>
       </body>

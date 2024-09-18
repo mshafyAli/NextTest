@@ -9,6 +9,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'primary': '#010621',
+        'tertiary': '#00C853',
+      },
+      
       keyframes: {
         blink: {
           '0%, 100%': { opacity: 1 },

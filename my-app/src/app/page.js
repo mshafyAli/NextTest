@@ -10,6 +10,8 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Navbar from '@/Components/Navbar'
 import Expert from '@/Components/Expert'
+import Support from '@/Components/Support'
+import Gurantees from '@/Components/Gurantees'
 
 const Home = () => {
   const router = useRouter();
@@ -29,6 +31,9 @@ const Home = () => {
       <Services/>
       <EasyToStart/>
       <Expert/>
+      <Gurantees/>
+
+      <Support/>
 
       
     </div>

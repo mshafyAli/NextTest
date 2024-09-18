@@ -12,7 +12,7 @@ const Banner = () => {
 
 
   return (
-    <div className="bg-cover bg-center bg-[#010621] w-full h-screen" style={{backgroundImage:'url(/bgbanner.png)'}}>
+    <div className="bg-cover bg-center bg-[#010621] w-full h-auto" style={{backgroundImage:'url(/bgbanner.png)'}}>
       <div className="bg-banner-bg bg-cover bg-center h-auto w-full">
         <div className="md:w-[80%]  max-w-7xl mx-auto px-4 py-12">
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-20">
