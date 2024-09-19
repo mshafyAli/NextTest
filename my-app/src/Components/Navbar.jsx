@@ -12,7 +12,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { TalkBtn } from "./TalkBtn";
 
-const Navbar = ({ aboutRef, contactRef }) => {
+const Navbar = ({ onAboutClick, onContactClick }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -35,21 +35,7 @@ const Navbar = ({ aboutRef, contactRef }) => {
     }
   };
 
-  // const scrollToAbout = () => {
-  //   if (aboutRef.current) {
-  //     aboutRef.current.scrollIntoView({ behavior: "smooth" });
-  //   }
-  //   // Update the URL without reloading the page
-  //   router.push("/about-us");
-  // };
-
-  const scrollToContactUs = () => {
-    if (contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    // Update the URL without reloading the page
-    router.push("/contact-us");
-  };
+ 
 
  
  
@@ -75,12 +61,9 @@ const Navbar = ({ aboutRef, contactRef }) => {
             <h1 className="font-bold">Home</h1>
           </Link>
 
-          <a  href="/about-us" onClick={(e) => {
-                e.preventDefault(); // Prevent default link behavior
-                router.push("/about-us"); // Change URL
-              }}>
-            <h1 className="cursor-pointer font-bold">About</h1>
-          </a>
+          
+
+          <button onClick={onAboutClick} className="font-bold cursor-pointer">About</button>
 
           <div
             className="relative flex items-center gap-1"
@@ -140,6 +123,8 @@ const Navbar = ({ aboutRef, contactRef }) => {
               </div>
             )}
           </div>
+
+          <button onClick={onContactClick} className="font-bold cursor-pointer">Contact Us</button>
 
           <Link href="/review">
             <h1 className="font-bold">Our Reviews</h1>

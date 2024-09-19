@@ -5,7 +5,7 @@ import Image from "next/image";
 const Gurantees = () => {
   
   return (
-    <div className="w-[70%] mx-auto mt-14">
+    <div className="w-[70%] mx-auto mt-14 mb-24">
       <h1 className="text-[#5A5A5A] text-3xl md:text-6xl text-center font-bold pb-10 py-2">
         MEET OUR EXPERTS
       </h1>
@@ -27,7 +27,7 @@ const Gurantees = () => {
           </p>
         </div>
 
-        <div className="bg-[white] border absolute -right-4 -top-4 border-gray-300 w-[320px] h-[480px] shadow-lg rounded-md">
+        <div className="bg-[white] border absolute -right-4 -top-4 border-gray-300 w-[320px] h-auto shadow-lg rounded-md">
             <div className="px-6 py-8">
           
                 <h3 className="text-lg font-semibold  pb-2 mb-4">Free Extras</h3>
@@ -98,9 +98,9 @@ const Gurantees = () => {
 
 
            
-            <div className="flex items-center justify-center gap-4 mt-6 text-sm text-gray-600">
-                <Image src="/secure.webp" alt="securePic" width={150} height={150}/>
-                <Image src="/support2.webp" alt="suportPic" width={150} height={150}/>
+            <div className="flex items-center justify-center gap-4 mt-6 text-sm text-gray-600 px-4">
+                <Image src="/secure.webp" alt="securePic" width={150} height={200}/>
+                <Image src="/support2.webp" alt="suportPic" width={150} height={200}/>
                
             </div>
             </div>
