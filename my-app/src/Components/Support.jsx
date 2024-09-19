@@ -139,10 +139,10 @@ const Support = () => {
           {/* Content for larger screens */}
           <div className="hidden md:block ">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white uppercase text-center">
-            HERE'S WHO WILL BE PROCESSING
+            HERE&apos;S WHO WILL BE PROCESSING
             </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white uppercase text-center">
-            YOUR 'ACADEMIC HELP' REQUESTS
+            YOUR &apos;ACADEMIC HELP&apos; REQUESTS
             </h2>
            
           </div>
@@ -150,13 +150,13 @@ const Support = () => {
           {/* Content for smaller screens */}
           <div className="block md:hidden mt-10">
             <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white uppercase text-center">
-            HERE'S WHO WILL BE PROCESSING YOUR 'ACADEMIC HELP' REQUESTS
+            HERE&apos;S WHO WILL BE PROCESSING YOUR &apos;ACADEMIC HELP&apos; REQUESTS
             </h1>
           </div>
         </div>
 
         <p className="text-center text-white   w-[95%] md:w-[75%] lg:w-[60%] xl:w-[53%] mx-auto opacity-70 -mt-10">
-        These are real people from the UK who know their job inside out. You don't see them, but you can't help but notice their quick answers on Chat.
+        These are real people from the UK who know their job inside out. You don&apos;t see them, but you can&apos;t help but notice their quick answers on Chat.
         </p>
         
         <h1 className="text-center mt-8 md:mt-10 uppercase text-white font-semibold text-lg md:text-xl">
@@ -286,7 +286,7 @@ const Support = () => {
 
    
         <p className="text-center font-bold text-white mt-16 text-xl">
-          NEED ASSISTANCE? WE'RE HERE FOR YOU 24/7!
+          NEED ASSISTANCE? WE&apos;RE HERE FOR YOU 24/7!
         </p>
 
         <div className="md:flex items-center justify-center pt-8 w-full pb-8">
