@@ -1,12 +1,18 @@
+import Footer from '@/Components/Footer'
 import Navbar from '@/Components/Navbar'
+import ReviewBanner from '@/Components/ReviewBanner'
+import ReviewCards from '@/Components/ReviewCards'
 import React from 'react'
 
-const page = () => {
+const ReviewPage = () => {
   return (
     <div>
       <Navbar/>
+      <ReviewBanner/>
+      <ReviewCards/>
+      <Footer/>
     </div>
   )
 }
 
-export default page
+export default ReviewPage
