@@ -5,7 +5,7 @@ import { LuLampDesk } from "react-icons/lu";
 import { FaGripLines,FaArrowsTurnToDots, FaUserDoctor,FaComputer,FaBuildingColumns } from "react-icons/fa6";
 import { GoLaw } from "react-icons/go";
 import { TbSpeakerphone } from "react-icons/tb";
-import { MdPsychology } from "react-icons/md";
+import { MdPsychology,MdOutlineStackedBarChart } from "react-icons/md";
 import { RiBuilding2Fill } from "react-icons/ri";
 
 
@@ -19,7 +19,7 @@ const subjects = [
   { id: 7, name: "Chemistry", icon: <FaStarOfDavid  color="white" size={20} /> },
   { id: 8, name: "Philosophy", icon: <FaArrowsTurnToDots color="white" size={20} /> },
   { id: 9, name: "Computer Science", icon: <FaComputer color="white" size={20} /> },
-  { id: 10, name: "Economics", icon: <FaPalette color="white" size={20} /> },
+  { id: 10, name: "Economics", icon: <MdOutlineStackedBarChart color="white" size={20} /> },
   { id: 11, name: "Nursing", icon: <FaUserDoctor color="white" size={20} /> },
   { id: 12, name: "Engineering", icon: <FaPalette color="white" size={20} /> },
   { id: 13, name: "Marketing", icon: <TbSpeakerphone color="white" size={20} /> },
@@ -54,7 +54,7 @@ const SubjectsCard = () => {
                 <a key={subject.id} href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="cursor-pointer">
                 <div
                 
-                className="bg-white md:w-[200px] w-[180px] h-16 rounded-md shadow-lg"
+                className="bg-white md:w-[200px] w-full h-16 rounded-md shadow-lg"
               >
                 <div className="flex items-center gap-2 px-2 py-2">
                   <div><div className="bg-[#007285] w-10 h-10 rounded-full flex justify-center items-center">

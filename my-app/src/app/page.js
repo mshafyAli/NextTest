@@ -40,6 +40,19 @@ const Home = () => {
     }
   };
 
+
+  // const handleScrollToAbout = () => {
+  //   if (aboutRef.current) {
+  //     router.push('/#about');
+  //   }
+  // };
+
+  // const handleScrollToContact = () => {
+  //   if (contactRef.current) {
+  //     router.push('/#contact-us');
+  //   }
+  // };
+
   useEffect(() => {
     // Scroll to "About" or "Contact Us" if hash is present
     if (window.location.hash === "#about" && aboutRef.current) {
