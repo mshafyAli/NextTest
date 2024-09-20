@@ -1,6 +1,6 @@
 "use client"
 
-import {  useRef} from 'react';
+import {  useRef,useEffect} from 'react';
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
 import Navbar from '../../../Components/Navbar';
@@ -18,6 +18,10 @@ const ThankYouPage = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     router.push(`${path}${hash}`);
   };
+
+  useEffect(() => {
+    document.title = 'Thank You - Academians UK'; 
+  }, []);
 
 
 

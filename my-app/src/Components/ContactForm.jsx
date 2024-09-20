@@ -27,7 +27,7 @@ const ContactForm = () => {
         },
       };
 
-      const res = await axios.post(`https://be.academians.co.uk/api/signup.php`, data, config);
+      const res = await axios.post(`http://localhost/php-backend/api/signup.php`, data, config);
 
       if (res.status === 201 || res.status === 200) {
         setName("");
@@ -41,7 +41,7 @@ const ContactForm = () => {
         
         })
         router.push(`/thankyou?${urlParams.toString()}`);
-        window.scrollTo(0, 0);
+       
       } else {
         console.error("Error:", res);
       }

@@ -121,8 +121,8 @@ import Image from "next/image";
 const Gurantees = () => {
   return (
     <div className="w-[90%] lg:w-[70%] mx-auto mt-10 mb-24">
-      <h1 className="text-[#5A5A5A] text-2xl md:text-4xl lg:text-6xl text-center font-bold pb-6">
-        MEET OUR EXPERTS
+      <h1 className="text-[#5A5A5A] text-3xl md:text-6xl uppercase text-center font-bold pb-6">
+      Guarantees
       </h1>
       <div className="bg-primary w-full h-auto relative flex flex-col lg:flex-row">
         <div className="px-4 md:px-8 lg:px-12 py-10 md:py-20 w-full lg:w-[50%]">

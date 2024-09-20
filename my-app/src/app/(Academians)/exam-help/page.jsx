@@ -1,6 +1,6 @@
 "use client"
 import About from '@/Components/About'
-import Banner from '@/Components/ResearchPropsalHelp/Banner'
+import Banner from '@/Components/ExamHelp/Banner'
 import ContactUs from '@/Components/ContactUs'
 import EasyToStart from '@/Components/EasyToStart'
 import Expert from '@/Components/Expert'
@@ -16,13 +16,12 @@ import { useRef,useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Head from 'next/head'
 
-
-const ResearchPropsalPage = () => {
+const ExamHelpPage = () => {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
   const router = useRouter();
   useEffect(()=>{
-    document.title = 'Research Help - Academians UK';
+    document.title = 'Exam Help - Academians UK';
   })
 
   const handleAboutClick = () => {
@@ -35,7 +34,7 @@ const ResearchPropsalPage = () => {
   return (
     <div>
       <Head>
-        <title>Research Help - Academians UK</title>
+        <title>Exam Help - Academians UK</title>
       </Head>
         <Navbar handleAboutClick={handleAboutClick} handleContactClick={handleContactClick}/>
         <Banner/>
@@ -54,4 +53,4 @@ const ResearchPropsalPage = () => {
   )
 }
 
-export default ResearchPropsalPage
+export default ExamHelpPage

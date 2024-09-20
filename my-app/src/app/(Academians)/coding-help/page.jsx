@@ -1,6 +1,7 @@
+
 "use client"
 import About from '@/Components/About'
-import Banner from '@/Components/ResearchPropsalHelp/Banner'
+import Banner from '@/Components/CodingHelp/Banner'
 import ContactUs from '@/Components/ContactUs'
 import EasyToStart from '@/Components/EasyToStart'
 import Expert from '@/Components/Expert'
@@ -13,17 +14,21 @@ import SubjectsCard from '@/Components/SubjectsCard'
 import Support from '@/Components/Support'
 import React from 'react'
 import { useRef,useEffect } from 'react'
-import { useRouter } from 'next/navigation'
 import Head from 'next/head'
+import { useRouter } from 'next/navigation'
 
 
-const ResearchPropsalPage = () => {
+
+const CodingHelpPage = () => {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
   const router = useRouter();
+  
+   
   useEffect(()=>{
-    document.title = 'Research Help - Academians UK';
+    document.title = 'Coding Help - Academians UK';
   })
+
 
   const handleAboutClick = () => {
     router.push('/#about'); // Navigate to the home page with the '/about' URL
@@ -34,8 +39,8 @@ const ResearchPropsalPage = () => {
   };
   return (
     <div>
-      <Head>
-        <title>Research Help - Academians UK</title>
+        <Head>
+        <title>Coding Help - Academians UK</title>
       </Head>
         <Navbar handleAboutClick={handleAboutClick} handleContactClick={handleContactClick}/>
         <Banner/>
@@ -54,4 +59,4 @@ const ResearchPropsalPage = () => {
   )
 }
 
-export default ResearchPropsalPage
+export default CodingHelpPage

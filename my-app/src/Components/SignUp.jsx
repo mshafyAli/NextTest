@@ -2,16 +2,15 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
-// import hotOfferIcon from "../assets/hotOfferIcon.png";
-// import baseUrl from "../baseUrl.js";
+import { useRouter } from "next/navigation";
+
 
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false); 
-//   const navigate = useNavigate();
+   const router = useRouter(); 
 
   const [time, setTime] = useState({
     hours: 1,
@@ -59,7 +58,7 @@ const SignUp = () => {
         },
       };
 
-      const res = await axios.post(`https://be.academians.co.uk/api/signup.php`, data, config);
+      const res = await axios.post(`http://localhost/php-backend/api/signup.php`, data, config);
 
       if (res.status === 201 || res.status === 200) {
         setName("");
@@ -75,9 +74,9 @@ const SignUp = () => {
       }).toString();
 
      
-    //   navigate(`/thankyou?${urlParams}`);
       
-        window.scrollTo(0, 0);
+      router.push(`/thankyou?${urlParams}`);
+    
       } else {
         console.error("Error:", res);
       }

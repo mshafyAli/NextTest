@@ -35,10 +35,10 @@ const subjects = [
 const SubjectsCard = () => {
   return (
     <div className="md:w-[70%] w-[90%] mx-auto mt-10">
-      <h1 className="text-[#5A5A5A] text-3xl md:text-6xl text-center font-bold pb-10 py-2">
+      <h1 className="text-[#5A5A5A] text-3xl md:text-6xl text-center font-bold pb-10 py-2 uppercase">
         Subjects We Covered
       </h1>
-      <h2 className="text-[#5A5A5A] text-2xl md:text-4xl text-center font-bold">
+      <h2 className="text-[#5A5A5A] text-2xl md:text-4xl text-center font-bold uppercase">
         We&apos;ve Covered <span className="text-tertiary">650+</span> Subjects
       </h2>
       <p className="text-[#5A5A5A] text-center text-sm py-2">
