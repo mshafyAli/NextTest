@@ -7,6 +7,7 @@ import Navbar from '../../../Components/Navbar';
 import Footer from '../../../Components/Footer';
 import { FaGift } from 'react-icons/fa';
 import { TalkBtn } from '../../../Components/TalkBtn';
+import Top from '@/Components/Top';
 
 
 const ThankYouPage = () => {
@@ -31,7 +32,7 @@ const ThankYouPage = () => {
       <Head>
         <title>Thank You - Academians UK</title>
       </Head>
-  
+      <Top/>
       <Navbar />
       <div className="flex items-center justify-center py-12 px-4">
         <div className="bg-white max-w-3xl w-full shadow-xl px-6 py-8 md:px-10 md:py-12">

@@ -198,10 +198,10 @@
 import dynamic from 'next/dynamic';
 import React, { useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Top from '@/Components/Top';
 
 
 // Dynamically import the components
+const Top = dynamic(() => import('@/Components/Top')); 
 const Navbar = dynamic(() => import('@/Components/Navbar'));
 const Banner = dynamic(() => import('@/Components/Banner'));
 const About = dynamic(() => import('@/Components/About'));

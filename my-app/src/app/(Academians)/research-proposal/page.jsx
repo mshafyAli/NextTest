@@ -15,6 +15,7 @@ import React from 'react'
 import { useRef,useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Head from 'next/head'
+import Top from '@/Components/Top'
 
 
 const ResearchPropsalPage = () => {
@@ -37,6 +38,7 @@ const ResearchPropsalPage = () => {
       <Head>
         <title>Research Help - Academians UK</title>
       </Head>
+      <Top/>
         <Navbar handleAboutClick={handleAboutClick} handleContactClick={handleContactClick}/>
         <Banner/>
         <About aboutRef={aboutRef} />

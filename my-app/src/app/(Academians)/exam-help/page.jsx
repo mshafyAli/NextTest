@@ -15,6 +15,7 @@ import React from 'react'
 import { useRef,useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Head from 'next/head'
+import Top from '@/Components/Top'
 
 const ExamHelpPage = () => {
   const aboutRef = useRef(null);
@@ -36,6 +37,7 @@ const ExamHelpPage = () => {
       <Head>
         <title>Exam Help - Academians UK</title>
       </Head>
+      <Top/>
         <Navbar handleAboutClick={handleAboutClick} handleContactClick={handleContactClick}/>
         <Banner/>
         <About aboutRef={aboutRef} />

@@ -10,6 +10,7 @@ import axios from "axios";
 import Footer from "@/Components/Footer";
 import FooterBanner from "@/Components/FooterBanner";
 import Navbar from "@/Components/Navbar";
+import Top from "@/Components/Top";
 
 
 const OrderNowPage = () => {
@@ -103,7 +104,7 @@ const OrderNowPage = () => {
       <Head>
         <title>Order Now - Academians Australia Pty Ltd</title>
       </Head>
-
+      <Top/>
       {/* Navbar */}
       <Navbar aboutRef={aboutRef} contactRef={contactRef} />
 
