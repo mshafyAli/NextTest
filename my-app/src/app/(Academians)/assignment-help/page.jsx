@@ -4,21 +4,21 @@ import React, { useRef, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
+import Top from '@/Components/Top';
+import Navbar from '@/Components/Navbar';
+import Banner from '@/Components/AssignmentHelp/Banner';
 
 // Dynamically import components
 const About = dynamic(() => import('@/Components/About'));
-const Banner = dynamic(() => import('@/Components/AssignmentHelp/Banner'));
 const ContactUs = dynamic(() => import('@/Components/ContactUs'));
 const EasyToStart = dynamic(() => import('@/Components/EasyToStart'));
 const Expert = dynamic(() => import('@/Components/Expert'));
 const Footer = dynamic(() => import('@/Components/Footer'));
 const FooterBanner = dynamic(() => import('@/Components/FooterBanner'));
 const Gurantees = dynamic(() => import('@/Components/Gurantees'));
-const Navbar = dynamic(() => import('@/Components/Navbar'));
 const Services = dynamic(() => import('@/Components/Services'));
 const SubjectsCard = dynamic(() => import('@/Components/SubjectsCard'));
 const Support = dynamic(() => import('@/Components/Support'));
-const Top = dynamic(() => import('@/Components/Top'));
 
 const AssignmentHelpPage = () => {
   const aboutRef = useRef(null);

@@ -3,9 +3,9 @@ import React, { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
+import Navbar from '@/Components/Navbar';
 
 // Dynamically import components
-const Navbar = dynamic(() => import('@/Components/Navbar'));
 const ReviewBanner = dynamic(() => import('@/Components/ReviewBanner'));
 const ReviewCards = dynamic(() => import('@/Components/ReviewCards'));
 const Footer = dynamic(() => import('@/Components/Footer'));
@@ -41,3 +41,5 @@ const ReviewPage = () => {
 };
 
 export default ReviewPage;
+
+
