@@ -198,6 +198,7 @@
 import dynamic from 'next/dynamic';
 import React, { useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Head from '@/Components/Head';
 
 // Dynamically import the components
 const Navbar = dynamic(() => import('@/Components/Navbar'));
@@ -239,6 +240,7 @@ const Home = () => {
 
   return (
     <div>
+      <Head/>
       <Navbar 
         handleAboutClick={() => handleScrollToSection(aboutRef, 'about')} 
         handleContactClick={() => handleScrollToSection(contactRef, 'contact-us')} 
