@@ -1,6 +1,6 @@
 // import { Inter } from "next/font/google";
 // import "./globals.css";
-// import Head from "@/Components/Head";
+// // import Head from "@/Components/Head";
 // import TawkToComponent from "@/Components/TawkToComponent";
 // import { GoogleTagManager } from '@next/third-parties/google'
 
@@ -18,7 +18,7 @@
 //       <body
 //         className={inter.className}
 //       >
-//         <Head/>
+//         {/* <Head/> */}
         
 //         {children}
 //         {/* <TawkToComponent/> */}
@@ -59,13 +59,20 @@
 //   );
 // }
 
+
+
+
+
+
+// app/layout.js or app/RootLayout.js (depending on your project structure)
+
 import { Inter } from "next/font/google";
 import Script from "next/script"; 
-import Head from "next/head"; 
 import "./globals.css";
+import Head from "next/head"; 
 import TawkToComponent from "@/Components/TawkToComponent";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" }); // Use 'swap' to optimize font loading
 
 export const metadata = {
   title: "UK Top Ranked Academic Helpers - Academians UK",
@@ -73,37 +80,53 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const gtmId = "GTM-TMWZ98XS"; // Ensure this is your correct GTM ID
+
   return (
     <html lang="en">
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        {/* Other head elements here */}
+        {/* Preload GTM script for better performance */}
+        <link
+          rel="preload"
+          href={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
+          as="script"
+        />
       </Head>
 
-      {/* Google Tag Manager Script */}
-      <Script
-        id="google-tag-manager"
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtm.js?id=GTM-TMWZ98XS`}
-      />
-
       <body className={inter.className}>
+        {/* Google Tag Manager Script in the <head> */}
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive" // Load after the page becomes interactive
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${gtmId}');
+            `,
+          }}
+        />
+
         {/* Google Tag Manager noscript fallback */}
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMWZ98XS" 
-              height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+            __html: `
+              <iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            `,
           }}
         />
+
         {children}
+
+        {/* Optionally include TawkToComponent if needed */}
         {/* <TawkToComponent /> */}
       </body>
     </html>
   );
 }
-
-
-
-
 

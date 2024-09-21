@@ -2,7 +2,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { IoCall } from "react-icons/io5";
 import { CgMail } from "react-icons/cg";
 
-const Head = () => {
+const Top = () => {
   return (
     <div className="bg-white w-full h-10 hidden md:block">
       <div className="w-[90%] mx-auto">
@@ -48,4 +48,4 @@ const Head = () => {
   )
 }
 
-export default Head
+export default Top

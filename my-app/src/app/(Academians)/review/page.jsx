@@ -7,6 +7,7 @@ import Footer from '@/Components/Footer';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import Head from 'next/head';
+import Top from '@/Components/Top';
 
 const ReviewPage = () => {
   const router = useRouter();
@@ -25,9 +26,10 @@ const ReviewPage = () => {
 
   return (
     <div>
-      <Head>
+      <Top>
         <title>Review - Academians UK</title>
-      </Head>
+      </Top>
+      <Head/>
       <Navbar handleAboutClick={handleAboutClick} handleContactClick={handleContactClick} />
       <ReviewBanner />
       <ReviewCards />
