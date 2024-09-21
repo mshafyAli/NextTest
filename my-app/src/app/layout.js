@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "@/Components/Head";
 import TawkToComponent from "@/Components/TawkToComponent";
-// import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <GoogleTagManager gtmId="GTM-TMWZ98XS"/> */}
+      <GoogleTagManager gtmId="GTM-TMWZ98XS"/>
       <body
         className={inter.className}
       >

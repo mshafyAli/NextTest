@@ -45,7 +45,7 @@ const SubjectsCard = () => {
         We have built a team who with their distinct expertise creates diversity in academic disciplines
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-2">
         {subjects.map((subject) => {
              const whatsappUrl = `https://wa.me/447397145697?text=${encodeURIComponent(
             `Hello Team Academians, I need help with ${subject.name}.`
