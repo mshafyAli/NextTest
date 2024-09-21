@@ -32,51 +32,7 @@ const Navbar = ({handleAboutClick, handleContactClick}) => {
 
 
 
-  // const handleScrollToSection = (ref) => {
-  //   if (ref && ref.current) {
-  //     ref.current.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // };
 
-  // const handleAboutClick = () => {
-  //   if (pathname === '/') {
-  //     // If already on the Home page, scroll to the About section
-  //     handleScrollToSection(aboutRef);
-  //   } else {
-  //     // Navigate to the Home page with query param for 'about' section
-  //     router.push('/?scrollTo=about');
-  //   }
-  // };
-
-  // const handleContactClick = () => {
-  //   if (pathname === '/') {
-  //     // If already on the Home page, scroll to the Contact section
-  //     handleScrollToSection(contactRef);
-  //   } else {
-  //     // Navigate to the Home page with query param for 'contact' section
-  //     router.push('/?scrollTo=contact');
-  //   }
-  // };
-
-   // Navigate to home with hash for scrolling
-  //  const handleScrollToAbout = () => {
-  //   router.push('/#about');
-  // };
-
-  // const handleScrollToContact = () => {
-  //   router.push('/#contact-us');
-  // };
-
-
-  // const handleAboutClick = () => {
-  //   // Navigate to home page with query param for 'about' section
-  //   router.push('/?scrollTo=about');
-  // };
-
-  // const handleContactClick = () => {
-  //   // Navigate to home page with query param for 'contact' section
-  //   router.push('/?scrollTo=contact');
-  // };
 
   // Close dropdown if click outside of dropdown or service
   const handleClickOutside = (event) => {
@@ -252,7 +208,7 @@ const Navbar = ({handleAboutClick, handleContactClick}) => {
             </div>
             {isDropdownOpen && (
               <div
-                className="bg-[#007285] border border-[#ffffff7a] w-[220px] text-white rounded-md shadow-lg mt-2 mb-4"
+                className="bg-primary border border-[#ffffff7a] w-[220px] text-white rounded-md shadow-lg mt-2 mb-4"
                 ref={dropdownRef}
               >
                 <ul>

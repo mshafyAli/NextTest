@@ -134,7 +134,7 @@ const Banner = () => {
                 <div className="bg-[#00000080]  md:w-44 h-16 p-2 rounded-md border border-white">
                   <div className="flex items-center justify-between h-full">
                     <div>
-                        <SiTrustpilot  color="#E85F2A" className="w-8 h-8 md:w-9 md:h-9"/>
+                        <SiTrustpilot  color="#00C853" className="w-8 h-8 md:w-9 md:h-9"/>
                       
                     </div>
                     <div className="flex flex-col items-start">
