@@ -48,18 +48,7 @@ export default function RootLayout({ children }) {
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=GTM-TMWZ98XS"
       />
-      <Script
-        id="gtag-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'GTM-TMWZ98XS');
-          `,
-        }}
-      />
+      
 
       <body className={inter.className}>
         <Head />

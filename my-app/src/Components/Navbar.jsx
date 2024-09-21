@@ -106,7 +106,8 @@ const Navbar = ({handleAboutClick, handleContactClick}) => {
       <div className="flex items-center justify-evenly md:w-[95%] w-[95%] ml-4 md:mx-auto text-white">
         <Link href="/">
           <div className="text-2xl">
-            <Image src="/ta-logo.png" alt="Logo" width="300" height="300" className="w-[300px] h-auto md:ml-0  -mr-12"/>
+            <Image src="/ta-logo.png" alt="Logo" width="300" height="300" quality={60}
+    priority className="w-[300px] h-auto md:ml-0  -mr-12"/>
           </div>
         </Link>
 

@@ -195,20 +195,23 @@
 
 'use client';
 
-import About from '@/Components/About';
-import Banner from '@/Components/Banner';
-import EasyToStart from '@/Components/EasyToStart';
-import Services from '@/Components/Services';
+import dynamic from 'next/dynamic';
 import React, { useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Navbar from '@/Components/Navbar';
-import Expert from '@/Components/Expert';    
-import Support from '@/Components/Support';
-import Gurantees from '@/Components/Gurantees';
-import ContactUs from '@/Components/ContactUs';
-import FooterBanner from '@/Components/FooterBanner';
-import Footer from '@/Components/Footer';
-import SubjectsCard from '@/Components/SubjectsCard';
+
+// Dynamically import the components
+const Navbar = dynamic(() => import('@/Components/Navbar'));
+const Banner = dynamic(() => import('@/Components/Banner'));
+const About = dynamic(() => import('@/Components/About'));
+const Services = dynamic(() => import('@/Components/Services'));
+const EasyToStart = dynamic(() => import('@/Components/EasyToStart'));
+const Expert = dynamic(() => import('@/Components/Expert'));
+const Support = dynamic(() => import('@/Components/Support'));
+const Gurantees = dynamic(() => import('@/Components/Gurantees'));
+const ContactUs = dynamic(() => import('@/Components/ContactUs'));
+const FooterBanner = dynamic(() => import('@/Components/FooterBanner'));
+const Footer = dynamic(() => import('@/Components/Footer'));
+const SubjectsCard = dynamic(() => import('@/Components/SubjectsCard'));
 
 const Home = () => {
   const router = useRouter();
@@ -256,6 +259,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 

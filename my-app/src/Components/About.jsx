@@ -113,7 +113,8 @@ const About = forwardRef((props, ref) => {
         </article>
 
         <div className="hidden md:block md:w-1/2">
-          <Image src="/aboutPic.webp" alt="About Assistance" className="w-full h-auto" width={500} height={500} />
+          <Image src="/aboutPic.webp" alt="About Assistance" className="w-full h-auto"
+     width={500} height={500} />
         </div>
       </div>
     </section>
