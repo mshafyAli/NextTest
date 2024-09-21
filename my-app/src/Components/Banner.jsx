@@ -1,7 +1,6 @@
 import { IoLogoWhatsapp } from "react-icons/io";
 import { IoStarSharp, IoStarHalfOutline } from "react-icons/io5";
 import { LuSunMedium } from "react-icons/lu";
-import { BiMessageRoundedDots } from "react-icons/bi";
 // import featureline from "../assets/featureline.png";
 import SignUp from "./SignUp";
 import { TalkBtn } from "./TalkBtn";
@@ -12,7 +11,7 @@ const Banner = () => {
 
 
   return (
-    <div className="bg-cover bg-center bg-[#010621] w-full h-auto" style={{backgroundImage:'url(/bgbanner.png)'}}>
+    <div className="bg-cover bg-center bg-[#010621] w-full h-auto">
       <div className="bg-banner-bg bg-cover bg-center h-auto w-full">
         <div className="md:w-[80%]  max-w-7xl mx-auto px-4 py-12">
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-20">
