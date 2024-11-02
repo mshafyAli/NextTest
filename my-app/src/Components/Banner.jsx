@@ -1,183 +1,103 @@
-import { IoLogoWhatsapp } from "react-icons/io";
 import { IoStarSharp, IoStarHalfOutline } from "react-icons/io5";
-import { LuSunMedium } from "react-icons/lu";
-// import featureline from "../assets/featureline.png";
 import SignUp from "./SignUp";
 import { TalkBtn } from "./TalkBtn";
 import { SiTrustpilot } from "react-icons/si";
+import { FaCheckCircle } from "react-icons/fa";
+
+
+
 import Image from "next/image";
+import Bullets from "./Bullets";
+import TwoButtons from "./TwoButtons";
 
 const Banner = () => {
-
-
   return (
-    <div className="bg-cover bg-center bg-[#010621] w-full h-auto">
+    <div className="bg-cover bg-center bg-primary w-full h-auto pt-20">
       <div className="bg-banner-bg bg-cover bg-center h-auto w-full">
-        <div className="md:w-[80%]  max-w-7xl mx-auto px-4 py-12">
-          <div className="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-20">
+        <div className="md:w-[80%]  max-w-7xl mx-auto px-4 md:py-10 py-6 ">
+          <div className="flex flex-col items-start md:flex-row gap-12 md:gap-20 lg:gap-20">
             {/* Left Container */}
-            <div className="text-white  md:w-[65%]">
-              <h1 className="text-[#ffb800] font-bold text-xl md:text-2xl uppercase">
-                FREE AI Testing REPORT
+            <div className="md:w-[50%]">
+              <div className="bg-white w-[120px] py-2 px-2 rounded-md  border-2 border-green font-medium text-xl  uppercase ">
+              <Image src="google-reviews.webp" alt="rph Logo" width={100} height={100} />
+              </div>
+              <h1 className="text-2xl md:text-4xl text-secondary font-bold mt-2">
+              We Publish Your Paper in Top Journals
               </h1>
-              <h1 className="text-white text-2xl md:text-4xl font-bold">
-                TOP NOTCH ACADEMIC HELP BY BRITISH PhD EXPERTS
-              </h1>
-                <Image src="/featureline.png"  alt="Feature Line" width={120} height={20} />
-              {/* <img src={featureline} alt="Feature line" className="mt-2" /> */}
+             
 
+             
 
-              <p className="whitespace-pre-wrap py-6 text-sm md:text-base lg:text-lg font-semibold">
-                Team Tutoring providing top quality academic assistance to help
-                students succeed in their academic career
-              </p>
+              <p className="whitespace-pre-wrap text-black pt-4 text-sm  font-medium">Are you planning to publish your articles or research papers?</p>
+              <p className="whitespace-pre-wrap text-black text-sm  font-medium">Stop struggling now and let us publish your paper in premium Journals.</p>
+
               
-              <div className="flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto md:hidden -mb-6 -mt-6">
-              <TalkBtn width="w-full" mdWidth="w-[230px]" bgColor="#ffb800" />
-                <a
-                  href={`https://wa.me/447397145697?text=${encodeURIComponent(
-                    "Hello Team Academians, I want to avail my promo code TA-OFF50."
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="bg-white w-full md:w-[230px] h-10 flex gap-2 items-center justify-center rounded-md">
-                    <IoLogoWhatsapp className="text-2xl text-[#408955]" />
-                    <h1 className="text-[#408955] font-bold text-sm md:text-base uppercase">
-                      Whatsapp Now
-                    </h1>
-                  </div>
-                </a>
-              </div>
+              
+              
+              <Bullets/>
+              
+              
 
-              <div className="flex flex-wrap gap-4 py-4">
-                <div className="flex items-center gap-1">
-                  <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
-                    24/7 Free Support
-                  </h1>
-                </div>
-                <div className="flex items-center gap-1">
-                  <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
-                    Best Price
-                  </h1>
-                </div>
-                <div className="flex items-center gap-1">
-                  <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
-                    100% Money Back Guarantee
-                  </h1>
-                </div>
-                <div className="flex items-center gap-1">
-                  <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
-                    Top Quality Work
-                  </h1>
-                </div>
-                <div className="flex items-center gap-1">
-                  <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
-                    Plagiarism Free
-                  </h1>
-                </div>
-                <div className="flex items-center gap-1">
-                  <LuSunMedium size={20} color="#F3C30E" />
-                  <h1 className="text-sm md:text-base lg:text-lg font-semibold">
-                    On time Deliver
-                  </h1>
-                </div>
-              </div>
+             
 
-              <div className="md:flex flex-col md:flex-row gap-4 py-8 w-full md:w-auto hidden">
-              <TalkBtn/>
-                <a
-                  href={`https://wa.me/447397145697?text=${encodeURIComponent(
-                    "Hello Team Academians, I want to avail my promo code TA-OFF50."
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="bg-white w-full md:w-[230px] h-10 flex gap-2 items-center justify-center rounded-md">
-                    <IoLogoWhatsapp className="text-2xl text-[#408955]" />
-                    <h1 className="text-[#408955] font-bold text-sm md:text-base uppercase">
-                      Whatsapp Now
-                    </h1>
-                  </div>
-                </a>
-              </div>
+              <div className="flex justify-center md:justify-start gap-4 py-2">
+                
 
-              <div className="flex justify-center md:justify-start gap-4 py-4">
-                <div className="bg-[#00000080] md:w-44 h-16 p-2 rounded-md border border-white">
-                  <div className="flex items-center justify-between h-full">
+                <div className="bg-secondary  md:w-[11rem] h-14 p-2 rounded-md ">
+                  <div className="flex items-center justify-start gap-1 h-full">
                     <div>
-                        <Image src='/ukwriters.png' className="w-8 h-8 md:w-9 md:h-9" alt="UK Writers" width={20}
-              height={20} />
-                      
+                      <SiTrustpilot className="w-7 h-7 md:w-8 md:h-8 text-[#00B67A]" />
                     </div>
                     <div className="flex flex-col items-start">
-                      <div className="flex items-center gap-1">
+                      <div className="flex items-center gap-1 text-white">
+                        <h1 className="text-base font-bold">4.7</h1>
+                        <div className="flex">
+                          <IoStarSharp className="text-[#90C120]" size={15} />
+                          <IoStarSharp className="text-[#90C120]" size={15} />
+                          <IoStarSharp className="text-[#90C120]" size={15} />
+                          <IoStarSharp className="text-[#90C120]" size={15} />
+                          <IoStarSharp className="text-[#90C120]" size={15} />
+                          
+                        </div>
+                      </div>
+                      <h1 className="text-sm text-white">TrustPilot</h1>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-secondary  md:w-[13rem] h-14 p-2 rounded-md ">
+                  <div className="flex items-center justify-start gap-1 h-full">
+                    <div>
+                    <Image src="/logo.png" alt="rph Logo" width={50} height={50} />
+                    </div>
+                    <div className="flex flex-col items-start">
+                      <div className="flex items-center gap-1 text-white">
                         <h1 className="text-base font-bold">4.9</h1>
                         <div className="flex">
-                          <IoStarSharp color="#E85F2A" />
-                          <IoStarSharp color="#E85F2A" />
-                          <IoStarSharp color="#E85F2A" />
-                          <IoStarSharp color="#E85F2A" />
-                          <IoStarHalfOutline color="#E85F2A" />
+                          <IoStarSharp className="text-[#90C120]" size={15} />
+                          <IoStarSharp className="text-[#90C120]" size={15} />
+                          <IoStarSharp className="text-[#90C120]" size={15} />
+                          <IoStarSharp className="text-[#90C120]" size={15} />
+                          <IoStarSharp className="text-[#90C120]" size={15} />
+                          
                         </div>
                       </div>
-                      <h1 className="text-sm">UK Top Writers</h1>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-[#00000080]  md:w-44 h-16 p-2 rounded-md border border-white">
-                  <div className="flex items-center justify-between h-full">
-                    <div>
-                        <SiTrustpilot  color="#00C853" className="w-8 h-8 md:w-9 md:h-9"/>
-                      
-                    </div>
-                    <div className="flex flex-col items-start">
-                      <div className="flex items-center gap-1">
-                        <h1 className="text-base font-bold">4.8</h1>
-                        <div className="flex">
-                          <IoStarSharp color="#E85F2A" />
-                          <IoStarSharp color="#E85F2A" />
-                          <IoStarSharp color="#E85F2A" />
-                          <IoStarSharp color="#E85F2A" />
-                          <IoStarHalfOutline color="#E85F2A" />
-                        </div>
-                      </div>
-                      <h1 className="text-sm">TrustPilot</h1>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="hidden md:block">
-                  <div className="bg-[#00000080]  md:w-44 h-16 p-2 rounded-md border border-white">
-                    <div className="flex items-center justify-between h-full">
-                      <div>
-                      <Image src='/sitejabber.png' className="w-8 h-8 md:w-9 md:h-9" alt="sitejabber" width={20}
-              height={20} />
-                       
-                      </div>
-                      <div className="flex flex-col items-start">
-                        <div className="flex items-center gap-1">
-                          <h1 className="text-base font-bold">4.8</h1>
-                          <div className="flex">
-                            <IoStarSharp color="#E85F2A" />
-                            <IoStarSharp color="#E85F2A" />
-                            <IoStarSharp color="#E85F2A" />
-                            <IoStarSharp color="#E85F2A" />
-                            <IoStarHalfOutline color="#E85F2A" />
-                          </div>
-                        </div>
-                        <h1 className="text-sm mr-4">SiteJabber</h1>
-                      </div>
+                      <h1 className="text-[12px] text-white">researchpublicationhouse</h1>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <div className="flex gap-2 items-center pt-4">
+              <FaCheckCircle className="text-secondary" size={20} />
+              <h1 className="text-secondary">We are Trusted By 40K+ Clients Worldwide & <span className="font-bold">Rated 4.9/5</span></h1>
+              </div>
+
+              <div className="bg-secondary w-[30rem] py-2 px-4 rounded-md my-3">
+              <Image src="/section-rating-1.png"alt="rph Logo" width={420} height={200} />
+              </div>
+             
+                <TwoButtons/>
             </div>
 
             {/* Right Container */}
@@ -187,7 +107,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-   </div>
+    </div>
   );
 };
 

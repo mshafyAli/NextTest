@@ -7,22 +7,31 @@ import React, { useRef, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
 import Head from 'next/head';
-import Top from '@/Components/Top'; 
 import Navbar from '@/Components/Navbar';
-import About from '@/Components/About';
-import ContactUs from '@/Components/ContactUs';
 import Banner from '@/Components/Banner';
+import SubjectExpert from '@/Components/SubjectExpert';
+
+
+
+
+
+
+
  
 
 // Dynamically import non-critical components
-const Services = dynamic(() => import('@/Components/Services'));
-const EasyToStart = dynamic(() => import('@/Components/EasyToStart'));
-const SubjectsCard = dynamic(() => import('@/Components/SubjectsCard'));
-const Expert = dynamic(() => import('@/Components/Expert'));
-const Gurantees = dynamic(() => import('@/Components/Gurantees'));
-const Support = dynamic(() => import('@/Components/Support'));
 const Footer = dynamic(() => import('@/Components/Footer'));
-const FooterBanner = dynamic(() => import('@/Components/FooterBanner'));
+const StickyBtn = dynamic(()=> import('@/Components/StickyBtn'));
+const SingleButton = dynamic(()=> import('@/Components/SingleButton'));
+const Package = dynamic(()=> import('@/Components/Package'));
+const SubBanner = dynamic(()=> import('@/Components/SubBanner'));
+const Clients = dynamic(()=> import('@/Components/Clients'));
+const Services = dynamic(()=> import('@/Components/Services'));
+const HighValue = dynamic(()=> import('@/Components/HighValue'));
+const DiscountBanner = dynamic(()=> import('@/Components/DiscountBanner'));
+
+
+
 
 const Home = () => {
   const router = useRouter();
@@ -54,7 +63,7 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>Home - Academians UK</title>
+        <title>Research Publishing House Services By Leading Experts</title>
         <meta name="description" content="Home page description here" />
         {/* Add smooth scrolling behavior via CSS */}
         <style>{`
@@ -63,22 +72,22 @@ const Home = () => {
           }
         `}</style>
       </Head>
-      <Top />
+
       <Navbar 
         handleAboutClick={() => handleScrollToSection(aboutRef, 'about')} 
         handleContactClick={() => handleScrollToSection(contactRef, 'contact-us')} 
       />
       <Banner />
-      <About ref={aboutRef} />
-      <Services />
-      <EasyToStart />
-      <SubjectsCard />
-      <Expert />
-      <Gurantees />
-      <Support />
-      <ContactUs ref={contactRef} />
+      <SubBanner />
+      <Clients/>
+      <Services/>
+      <HighValue/>
+      <Package/>
+      <DiscountBanner/>
+      <SubjectExpert/>
+      <SingleButton/>
       <Footer />
-      <FooterBanner />
+      <StickyBtn/>
     </div>
   );
 };

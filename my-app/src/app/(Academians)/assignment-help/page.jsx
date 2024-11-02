@@ -9,9 +9,8 @@ import Navbar from '@/Components/Navbar';
 import Banner from '@/Components/AssignmentHelp/Banner';
 
 // Dynamically import components
-const About = dynamic(() => import('@/Components/About'));
+const About = dynamic(() => import('@/Components/AssignmentHelp/About'));
 const ContactUs = dynamic(() => import('@/Components/ContactUs'));
-const EasyToStart = dynamic(() => import('@/Components/EasyToStart'));
 const Expert = dynamic(() => import('@/Components/Expert'));
 const Footer = dynamic(() => import('@/Components/Footer'));
 const FooterBanner = dynamic(() => import('@/Components/FooterBanner'));
@@ -19,6 +18,9 @@ const Gurantees = dynamic(() => import('@/Components/Gurantees'));
 const Services = dynamic(() => import('@/Components/Services'));
 const SubjectsCard = dynamic(() => import('@/Components/SubjectsCard'));
 const Support = dynamic(() => import('@/Components/Support'));
+const StickyBtn = dynamic(()=> import('@/Components/StickyBtn')) ;
+const SingleButton = dynamic(()=> import('@/Components/SingleButton')) ;
+
 
 const AssignmentHelpPage = () => {
   const aboutRef = useRef(null);
@@ -26,7 +28,7 @@ const AssignmentHelpPage = () => {
   const router = useRouter();
   
   useEffect(() => {
-    document.title = 'Assignment Help - Academians UK';
+    document.title = 'Assignment Help - The Academians UK Ltd.';
   }, []); 
 
   const handleAboutClick = () => {
@@ -40,21 +42,23 @@ const AssignmentHelpPage = () => {
   return (
     <div>
       <Head>
-        <title>Assignment Help - Academians UK</title>
+        <title>Assignment Help - The Academians UK Ltd.</title>
       </Head>
       <Top />
       <Navbar handleAboutClick={handleAboutClick} handleContactClick={handleContactClick} />
       <Banner />
       <About aboutRef={aboutRef} />
       <Services />
-      <EasyToStart />
+      {/* <EasyToStart /> */}
       <SubjectsCard />
       <Expert />
       <Gurantees />
       <Support />
       <ContactUs contactRef={contactRef} />
+      <SingleButton/>
       <Footer />
       <FooterBanner />
+      <StickyBtn/>
     </div>
   );
 };

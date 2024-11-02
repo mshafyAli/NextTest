@@ -10,8 +10,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#010621',
+        'primary': '#F9ECF3',
+        'secondary': "#14125C",
         'tertiary': '#00C853',
+        'green': "#FF8D6B",
+        "grey": "#F5F7FA",
+        "blue": "#123DCD",
+        "darkBlue": "#14125C",
+        
       },
       
       keyframes: {

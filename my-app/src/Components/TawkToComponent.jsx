@@ -1,8 +1,8 @@
-// components/TawkToComponent.jsx
+
 "use client";
 
-import { useEffect, useRef } from 'react';
-import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
+import { useEffect, useRef } from "react";
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
 const TawkToComponent = () => {
   const tawkMessengerRef = useRef(null);
@@ -14,22 +14,40 @@ const TawkToComponent = () => {
   };
 
   const onLoad = () => {
-    console.log('Tawk.to chat widget loaded!');
+    console.log("Tawk.to chat widget loaded!");
   };
+
+  
 
   return (
     <>
       <TawkMessengerReact
-        propertyId="601da070c31c9117cb7649b7" // Replace with your actual propertyId
-        widgetId="1etprlduf" // Replace with your actual widgetId
+        propertyId="66339c801ec1082f04ea383e" // Replace with your actual propertyId
+        widgetId="1hsspmlq1" // Replace with your actual widgetId
         ref={tawkMessengerRef}
         onLoad={onLoad}
+        
       />
       <button className="minimize-button" onClick={handleMinimize}>
-     
+       
       </button>
     </>
   );
 };
 
 export default TawkToComponent;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
