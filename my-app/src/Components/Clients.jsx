@@ -215,7 +215,7 @@ const CustomPrevArrow = (props) => {
   return (
     <button
       onClick={onClick}
-      className="absolute top-1/2 -left-4 transform -translate-y-1/2 text-2xl text-secondary z-10"
+      className="absolute hidden md:block top-1/2 -left-4 transform -translate-y-1/2 text-2xl text-secondary z-10"
     >
       <MdArrowBackIos size={30} />
     </button>
@@ -227,7 +227,7 @@ const CustomNextArrow = (props) => {
   return (
     <button
       onClick={onClick}
-      className="absolute top-1/2 -right-6 transform -translate-y-1/2 text-2xl text-secondary z-10"
+      className="absolute hidden md:block top-1/2 -right-6 transform -translate-y-1/2 text-2xl text-secondary z-10"
     >
       <MdArrowForwardIos size={30} />
     </button>
@@ -281,7 +281,7 @@ const Clients = () => {
 
       <Slider {...settings}>
         {/* Individual slide items */}
-        <div className="bg-white w-[420px] h-[230px] rounded-md shadow-md py-6 px-4">
+        <div className="bg-white w-[420px] md:h-[230px] h-auto rounded-md shadow-md py-6 px-4">
           <div className="flex justify-between items-center">
             <h1 className="font-bold">Samuel Gibbs</h1>
             <div className="flex">
@@ -311,13 +311,13 @@ const Clients = () => {
           <Image
             src="/client5.webp"
             alt="client"
-            className="rounded-md shadow-md w-[420px]  h-[230px]"
+            className="rounded-md shadow-md w-[420px]   md:h-[230px] h-auto"
             width={320}
             height={50}
           />
         </div>
 
-        <div className="bg-white w-[420px] h-[230px] rounded-md shadow-md py-6 px-4">
+        <div className="bg-white  md:h-[230px] h-auto rounded-md shadow-md py-6 px-4">
           <div className="flex justify-between items-center">
             <h1 className="font-bold">Lucas Williams</h1>
             <div className="flex">
@@ -345,13 +345,13 @@ const Clients = () => {
           <Image
             src="/client6.webp"
             alt="client"
-            className="rounded-md shadow-md w-[420px]  h-[230px]"
+            className="rounded-md shadow-md  md:h-[230px] h-auto"
             width={320}
             height={50}
           />
         </div>
 
-        <div className="bg-white w-[420px] h-[230px] rounded-md shadow-md py-6 px-4">
+        <div className="bg-white w-[420px]  md:h-[230px] h-auto rounded-md shadow-md py-6 px-4">
           <div className="flex justify-between items-center">
             <h1 className="font-bold">Fiona Smith</h1>
             <div className="flex">
@@ -379,7 +379,7 @@ const Clients = () => {
         <Image
           src="/client1.webp"
           alt="client"
-          className="rounded-md shadow-md w-[420px]  h-[230px]"
+          className="rounded-md shadow-md  md:h-[230px] h-auto"
           width={320}
           height={50}
         />

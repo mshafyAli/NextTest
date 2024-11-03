@@ -1,7 +1,4 @@
-
-
-
-'use client';
+"use client"; // Indicate that this component is a client component
 
 import React, { useRef, useEffect } from 'react';
 import dynamic from 'next/dynamic';
@@ -11,13 +8,7 @@ import Navbar from '@/Components/Navbar';
 import Banner from '@/Components/Banner';
 
 
-
-
-
-
- 
-
-// Dynamically import non-critical components
+// Dynamically import components
 const Footer = dynamic(() => import('@/Components/Footer'));
 const StickyBtn = dynamic(()=> import('@/Components/StickyBtn'));
 const SingleButton = dynamic(()=> import('@/Components/SingleButton'));
@@ -35,52 +26,29 @@ const Faq = dynamic(()=> import('@/Components/Faq'));
 
 
 
-
-
-const Home = () => {
-  const router = useRouter();
+const AssignmentExpertPage = () => {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
+  const router = useRouter();
+  
+  useEffect(() => {
+    document.title = 'Research Publishing House Services By Leading Experts';
+  }, []); 
 
-  // Helper function to scroll and update the URL
-  const handleScrollToSection = (ref, section) => {
-    console.log(`Scrolling to ${section}`);
-    console.log('Ref current:', ref.current);
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
-      // Update URL with hash without reloading the page
-      window.history.pushState(null, '', `#${section}`);
-    }
+  const handleAboutClick = () => {
+    router.push('/#about'); // Navigate to the home page with the '/about' URL
   };
 
-  // Scroll to the section based on URL hash when loading the page
-  useEffect(() => {
-    const section = window.location.hash.replace('#', '');
-    console.log('Initial load section:', section);
-    if (section === 'about' && aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-    } else if (section === 'contact-us' && contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, []);
+  const handleContactClick = () => {
+    router.push('/#contact-us'); // Navigate to the home page with the '/contact-us' URL
+  };
 
   return (
     <div>
       <Head>
         <title>Research Publishing House Services By Leading Experts</title>
-        <meta name="description" content="Home page description here" />
-        {/* Add smooth scrolling behavior via CSS */}
-        <style>{`
-          html {
-            scroll-behavior: smooth;
-          }
-        `}</style>
       </Head>
-
-      <Navbar 
-        handleAboutClick={() => handleScrollToSection(aboutRef, 'about')} 
-        handleContactClick={() => handleScrollToSection(contactRef, 'contact-us')} 
-      />
+      <Navbar handleAboutClick={handleAboutClick} handleContactClick={handleContactClick} />
       <Banner />
       <SubBanner />
       <Clients/>
@@ -95,9 +63,11 @@ const Home = () => {
       <Faq/>
       <SingleButton/>
       <Footer />
+      
+  
       {/* <StickyBtn/> */}
     </div>
   );
 };
 
-export default Home;
+export default AssignmentExpertPage;

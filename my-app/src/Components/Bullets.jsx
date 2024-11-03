@@ -4,7 +4,7 @@ import { FaClockRotateLeft } from "react-icons/fa6";
 const Bullets = () => {
   return (
     <div>
-        <div className="grid grid-cols-2 gap-2  pt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2  pt-8 pb-4">
                 <div className="flex items-center gap-1">
                   <FaStar size={15} className="text-green" />
                   <h1 className="text-sm  font-font-medium">

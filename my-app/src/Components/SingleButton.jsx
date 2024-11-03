@@ -10,13 +10,13 @@ const SingleButton = () => {
   return (
     <div className="fixed hidden md:block bottom-2  left-2  z-50 ">
       <a
-                  href={`https://wa.me/447397145697?text=${encodeURIComponent(
-                    "Hello The Academians, I want to inquire about your services please!"
+                  href={`https://wa.me/447456428217?text=${encodeURIComponent(
+                    "I want to inquire about your services please!"
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="bg-green w-full md:w-[200px] h-8 flex gap-2 items-center justify-center rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 hover:shadow-lg animate-bounce">
+                  <div className="bg-[#023838] w-full md:w-[200px] h-8 flex gap-2 items-center justify-center rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 hover:shadow-lg animate-bounce">
                     <IoLogoWhatsapp className="text-2xl text-white" />
                     <h1 className="text-white font-bold text-sm  uppercase">
                     Get Instant Quote

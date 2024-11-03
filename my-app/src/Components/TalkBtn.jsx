@@ -13,7 +13,7 @@ export const TalkBtn = ({width = 'w-full',mdWidth = "md:w-[230px]", bgColor = "#
       var s1 = document.createElement("script"),
         s0 = document.getElementsByTagName("script")[0];
       s1.async = true;
-      s1.src = "https://tawk.to/chat/66339c801ec1082f04ea383e/1hsspmlq1";
+      s1.src = "https://tawk.to/chat/67236eb82480f5b4f596b0cc/default";
       s1.charset = "UTF-8";
       s1.setAttribute("crossorigin", "*");
       s0.parentNode.insertBefore(s1, s0);

@@ -22,8 +22,8 @@ const TawkToComponent = () => {
   return (
     <>
       <TawkMessengerReact
-        propertyId="66339c801ec1082f04ea383e" // Replace with your actual propertyId
-        widgetId="1hsspmlq1" // Replace with your actual widgetId
+        propertyId="67236eb82480f5b4f596b0cc" // Replace with your actual propertyId
+        widgetId="default" // Replace with your actual widgetId
         ref={tawkMessengerRef}
         onLoad={onLoad}
         

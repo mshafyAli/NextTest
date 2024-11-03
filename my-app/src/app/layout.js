@@ -98,25 +98,26 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const gtmId = "GTM-TMWZ98XS"; // Ensure this is your correct GTM ID
+  // const gtmId = "GTM-TMWZ98XS"; 
 
   return (
     <html lang="en">
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
        
         {/* Preload GTM script to optimize loading performance */}
-        <link
+        {/* <link
           rel="preload"
           href={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
           as="script"
-        />
+        /> */}
       </Head>
 
       <body className={poppins.className}>
         {/* Lazy load Google Tag Manager Script */}
-        <Script
+        {/* <Script
           id="google-tag-manager"
           strategy="lazyOnload" // Lazy load GTM script to load after all resources are fully loaded
           dangerouslySetInnerHTML={{
@@ -128,21 +129,21 @@ export default function RootLayout({ children }) {
               })(window,document,'script','dataLayer','${gtmId}');
             `,
           }}
-        />
+        /> */}
 
         {/* noscript fallback for GTM */}
-        <noscript
+        {/* <noscript
           dangerouslySetInnerHTML={{
             __html: `
               <iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>
             `,
           }}
-        />
+        /> */}
 
         {children}
 
-        {/* <TawkToComponent /> */}
+        <TawkToComponent />
       </body>
     </html>
   );

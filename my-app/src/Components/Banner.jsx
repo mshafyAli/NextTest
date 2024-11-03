@@ -11,15 +11,16 @@ import Bullets from "./Bullets";
 import TwoButtons from "./TwoButtons";
 
 const Banner = () => {
+  
   return (
-    <div className="bg-cover bg-center bg-primary w-full h-auto pt-20">
-      <div className="bg-banner-bg bg-cover bg-center h-auto w-full">
-        <div className="md:w-[80%]  max-w-7xl mx-auto px-4 md:py-10 py-6 ">
+    <div className=" bg-primary w-full h-auto pt-20 md:pb-12 pb-8">
+      <div className=" h-auto w-full">
+        <div className="md:w-[80%] w-[95%] mx-auto px-4 md:py-10 py-6 ">
           <div className="flex flex-col items-start md:flex-row gap-12 md:gap-20 lg:gap-20">
             {/* Left Container */}
-            <div className="md:w-[50%]">
+            <div className="md:w-[50%] w-full">
               <div className="bg-white w-[120px] py-2 px-2 rounded-md  border-2 border-green font-medium text-xl  uppercase ">
-              <Image src="google-reviews.webp" alt="rph Logo" width={100} height={100} />
+              <Image src="/google-reviews.webp" alt="rph Logo" width={100} height={100} />
               </div>
               <h1 className="text-2xl md:text-4xl text-secondary font-bold mt-2">
               We Publish Your Paper in Top Journals
@@ -40,7 +41,7 @@ const Banner = () => {
 
              
 
-              <div className="flex justify-center md:justify-start gap-4 py-2">
+              <div className="flex justify-center items-center md:flex-row  md:justify-start gap-4 py-2">
                 
 
                 <div className="bg-secondary  md:w-[11rem] h-14 p-2 rounded-md ">
@@ -82,7 +83,7 @@ const Banner = () => {
                           
                         </div>
                       </div>
-                      <h1 className="text-[12px] text-white">researchpublicationhouse</h1>
+                      <h1 className="text-[12px] text-white ">ResearchPublicationHouse</h1>
                     </div>
                   </div>
                 </div>
@@ -93,11 +94,12 @@ const Banner = () => {
               <h1 className="text-secondary">We are Trusted By 40K+ Clients Worldwide & <span className="font-bold">Rated 4.9/5</span></h1>
               </div>
 
-              <div className="bg-secondary w-[30rem] py-2 px-4 rounded-md my-3">
+              <div className="bg-secondary md:w-[30rem] w-full py-2 px-4 rounded-md my-3">
               <Image src="/section-rating-1.png"alt="rph Logo" width={420} height={200} />
               </div>
              
                 <TwoButtons/>
+               
             </div>
 
             {/* Right Container */}
@@ -112,3 +114,4 @@ const Banner = () => {
 };
 
 export default Banner;
+

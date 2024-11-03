@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Package = () => {
   return (
-    <div className="w-[80%] mx-auto my-10">
+    <div className="md:w-[80%] w-[90%] mx-auto my-10">
       <div>
         <h1 className="md:text-4xl text-center text-2xl text-secondary font-bold mt-2">
           A Complete Package Of Research Publishing House Assistance
@@ -16,8 +16,8 @@ const Package = () => {
         {/* container */}
         <div>
           {/* 1st */}
-          <div className="flex items-center justify-center gap-10 mt-6">
-            <div className="w-[45%]">
+          <div className="flex items-center flex-col md:flex-row justify-center md:gap-10 gap-4 mt-6">
+            <div className="md:w-[45%] w-full">
               <h1 className="text-green text-xl font-bold pl-7 uppercase">
                 Well-aligned And Targeted
               </h1>
@@ -43,11 +43,11 @@ const Package = () => {
           </div>
 
           {/* 2nd */}
-          <div className="flex items-center justify-center gap-20">
+          <div className="md:flex hidden flex-col md:flex-row items-center justify-center gap-20">
             <div>
               <Image src="/two.webp" alt="package" width={300} height={100} />
             </div>
-            <div className="w-[45%]">
+            <div className="md:w-[45%] w-full">
               <h1 className="text-green text-xl font-bold pl-8 uppercase">
                 Professional Submission
               </h1>
@@ -68,9 +68,36 @@ const Package = () => {
             </div>
           </div>
 
+          <div className="flex md:hidden flex-col md:flex-row items-center justify-center md:gap-20 gap-4">
+           
+            <div className="md:w-[45%] w-full">
+              <h1 className="text-green text-xl font-bold pl-8 uppercase">
+                Professional Submission
+              </h1>
+              <div className="flex gap-2">
+                <h1 className="text-secondary font-bold text-xl">02</h1>
+                <div>
+                  <h1 className="text-secondary font-bold text-xl">
+                    Peer-Review Approach
+                  </h1>
+                  <p>
+                    After refining your research paper and manuscript, we also
+                    provide you with Scopus journal paper submission assistance.
+                    This includes the attachment of a cover letter that
+                    highlights the importance of specific research.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <Image src="/two.webp" alt="package" width={300} height={100} />
+            </div>
+          </div>
+
+
           {/* 3rd */}
-          <div className="flex items-center justify-center gap-10 mt-10">
-            <div className="w-[45%]">
+          <div className="flex flex-col md:flex-row items-center justify-center md:gap-10 gap-4 mt-10">
+            <div className="md:w-[45%] w-full">
               <h1 className="text-green text-xl font-bold pl-8 uppercase">
                 Overview Before Publication
               </h1>

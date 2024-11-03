@@ -4,11 +4,11 @@ import Image from "next/image";
 const HighValue = () => {
   return (
     <div className="bg-primary w-full h-auto py-12">
-      <div className="w-[70%] mx-auto relative">
-        <h1 className="text-center text-2xl md:text-3xl text-secondary font-semibold">
+      <div className="md:w-[70%] w-[90%] mx-auto md:relative">
+        <h1 className="text-center text-2xl md:text-3xl text-secondary font-semibold md:pb-0 pb-4">
           High Value Packages
         </h1>
-        <div className="flex justify-center pt-24 pb-10">
+        <div className="md:flex justify-center hidden pt-24 pb-10">
           <Image
             src="/highBanner.webp"
             alt="high Logo"
@@ -18,8 +18,8 @@ const HighValue = () => {
         </div>
 
         {/* 1st section */}
-        <div className="flex gap-60 absolute top-[12%] right-[1rem]">
-          <div className="bg-white w-[400px] h-auto rounded-[15px]">
+        <div className="flex flex-col md:flex-row md:gap-60 gap-4 md:absolute md:top-[12%] md:right-[1rem]">
+          <div className="bg-white md:w-[400px] w-full h-auto rounded-[15px]">
             <div className="py-4 px-4 flex items-center gap-2">
               <div>
                 <h1 className="font-bold text-right">Experienced Editors</h1>
@@ -32,7 +32,7 @@ const HighValue = () => {
               <Image src="/high1.webp" alt="high Logo" width={80} height={80} />
             </div>
           </div>
-          <div className="bg-white w-[400px] h-auto rounded-[15px]">
+          <div className="bg-white md:w-[400px] w-full h-auto rounded-[15px]">
             <div className="py-4 px-4 flex items-center gap-2">
               <Image src="/high2.webp" alt="high Logo" width={80} height={80} />
               <div>
@@ -51,8 +51,8 @@ const HighValue = () => {
         </div>
 
         {/* 2nd Section */}
-        <div className="flex gap-60 absolute top-[40%] right-[4rem]">
-          <div className="bg-white w-[360px] h-auto rounded-[15px]">
+        <div className="flex flex-col md:flex-row md:gap-60 gap-4 md:absolute md:top-[40%] md:right-[4rem] pt-4 md:pt-0">
+          <div className="bg-white md:w-[360px] w-full h-auto rounded-[15px]">
             <div className="py-4 px-4 flex items-center gap-2">
               <div>
                 <h1 className="font-bold text-right">Academic Resources</h1>
@@ -64,7 +64,7 @@ const HighValue = () => {
               <Image src="/high3.webp" alt="high Logo" width={80} height={80} />
             </div>
           </div>
-          <div className="bg-white w-[360px] h-auto rounded-[15px]">
+          <div className="bg-white md:w-[360px] w-full h-auto rounded-[15px]">
             <div className="py-4 px-4 flex items-center gap-2">
               <Image src="/high4.webp" alt="high Logo" width={80} height={80} />
               <div>
@@ -80,8 +80,8 @@ const HighValue = () => {
         </div>
 
         {/* 3rd Section */}
-        <div className="flex gap-60 absolute top-[70%] right-[1rem]">
-          <div className="bg-white w-[400px] h-auto rounded-[15px]">
+        <div className="flex flex-col md:flex-row md:gap-60 gap-4 md:absolute md:top-[70%] md:right-[1rem] pt-4 md:pt-0">
+          <div className="bg-white md:w-[400px] w-full h-auto rounded-[15px]">
             <div className="py-4 px-4 flex items-center gap-2">
               <div>
                 <h1 className="font-bold text-right">Poster Formation</h1>
@@ -94,7 +94,7 @@ const HighValue = () => {
               <Image src="/high5.webp" alt="high Logo" width={80} height={80} />
             </div>
           </div>
-          <div className="bg-white w-[400px] h-auto rounded-[15px]">
+          <div className="bg-white md:w-[400px] w-full h-auto rounded-[15px]">
             <div className="py-4 px-4 flex items-center gap-2">
               <Image src="/high6.webp" alt="high Logo" width={80} height={80} />
               <div>
@@ -114,3 +114,4 @@ const HighValue = () => {
 };
 
 export default HighValue;
+

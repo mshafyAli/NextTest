@@ -368,113 +368,298 @@
 //   );
 // };
 
+// "use client";
+// import React, { useState } from "react";
+// import PhoneInput from "react-phone-input-2";
+// import "react-phone-input-2/lib/style.css";
+// import Select from "react-select";
+// import countryList from "react-select-country-list";
+// import Image from "next/image";
 
+// const SignUp = () => {
+//   const [phone, setPhone] = useState("");
+//   const [country, setCountry] = useState(null);
+//   const options = countryList().getData();
 
+//   const handleCountryChange = (selectedCountry) => {
+//     setCountry(selectedCountry);
+//   };
 
-import React, { useState } from 'react';
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
-import Select from 'react-select';
-import countryList from 'react-select-country-list';
-import Image from 'next/image'
+//   return (
+//     <>
+//       <div className="relative w-[400px] h-[100px] hidden md:block">
+//         <Image src="/brand.png" alt="brand" width={400} height={100} className="w-[350px] hidden md:block" />
+
+//         {/* Text Overlay */}
+//         <div className="absolute inset-0 flex items-center justify-center -left-10 -top-16">
+//           <h1 className="text-green font-bold md:text-base text-sm text-center">
+//             LOWEST PRICE <span className="text-white">GUARANTEED</span>
+//           </h1>
+//         </div>
+//       </div>
+
+//       <div className="w-full h-24 border-2 border-secondary mb-8 relative">
+//         <div className="relative bg-primary text-2xl font-semibold mx-auto bottom-4 px-4 w-[12rem]">Straight 50%
+//         </div>
+//         <h1 className="text-green font-extrabold flex justify-center items-center  text-4xl">DISCOUNT</h1>
+//         <div className="relative bg-secondary text-white text-sm md:font-semibold px-2 mx-auto -bottom-2 md:px-4  md:w-[22rem] w-full rounded-md">Up to 20% Additional Discount On Big Orders
+
+//         </div>
+//       </div>
+
+//       <div className="max-w-md mx-auto p-6 border border-green bg-white rounded-lg shadow-md">
+//         <h1 className="text-secondary text-center pb-4 text-2xl font-bold">
+//           Act Fast - Save Big!
+//         </h1>
+
+//         <form className="space-y-4">
+//           <div>
+//             <label className="block text-sm font-medium mb-1">Name*</label>
+//             <input
+//               type="text"
+//               placeholder="Your Name"
+//               className="w-full px-4 py-2 border border-secondary rounded-full focus:outline-none focus:ring-1 focus:ring-blue"
+//             />
+//           </div>
+//           <div>
+//             <label className="block text-sm font-medium mb-1">
+//               Email Address*
+//             </label>
+//             <input
+//               type="email"
+//               placeholder="Email"
+//               className="w-full px-4 py-2 rounded-full border border-secondary focus:outline-none focus:ring-1 focus:ring-blue"
+//             />
+//           </div>
+//           <div>
+//             <label className="block text-sm font-medium mb-1">Country*</label>
+
+//             <Select
+//               options={options}
+//               value={country}
+//               onChange={handleCountryChange}
+//               placeholder="---Select Country---"
+//               className="mt-1 "
+//               styles={{
+//                 control: (base) => ({
+//                   ...base,
+//                   borderColor: "#14125c",
+//                   boxShadow: "none",
+//                   borderRadius: "9999px",
+//                 }),
+//               }}
+//             />
+//           </div>
+//           <div>
+//             <label className="block text-sm font-medium mb-1">
+//               Phone Number*
+//             </label>
+
+//             <div className="w-full rounded-full  border border-secondary">
+//               <PhoneInput
+//                 country={"us"}
+//                 value={phone}
+//                 onChange={setPhone}
+//                 placeholder="Phone Number"
+//                 inputStyle={{
+//                   border: "none",
+//                   borderRadius: "9999px",
+//                   width: "100%",
+//                   paddingLeft: "52px", // Adjust for flag dropdown spacing
+//                 }}
+//                 buttonStyle={{
+//                   border: "none",
+//                   backgroundColor: "transparent",
+//                   paddingLeft: "10px", // Adjust as needed
+//                 }}
+//                 containerClass="w-full rounded-full"
+//                 inputClass="w-full rounded-full px-4 py-2"
+//               />
+//             </div>
+//           </div>
+//           <button
+//             type="submit"
+//             className="w-full bg-blue text-white py-2 rounded-full font-bold hover:bg-blue-700 transition"
+//           >
+//             Get My Free Quote
+//           </button>
+//         </form>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default SignUp;
+
+"use client";
+import React, { useState } from "react";
+import axios from "axios";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import Select from "react-select";
+import countryList from "react-select-country-list";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const SignUp = () => {
-  const [phone, setPhone] = useState('');
+  const [phone, setPhone] = useState("");
   const [country, setCountry] = useState(null);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Loading state
   const options = countryList().getData();
+  const router = useRouter();
 
   const handleCountryChange = (selectedCountry) => {
     setCountry(selectedCountry);
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    const data = {
+      name,
+      email,
+      country: country ? country.label : "",
+      phone,
+    };
+
+    try {
+      const response = await axios.post("https://be.researchpublishinghouse.com/api/signup.php", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.status === 200 || response.status === 201) {
+        // Clear form fields
+        setName("");
+        setEmail("");
+        setPhone("");
+
+        // Redirect to ThankYou page with query parameters
+        const urlParams = new URLSearchParams({
+          name: encodeURIComponent(name),
+          email: encodeURIComponent(email),
+          phone: encodeURIComponent(phone),
+        });
+        router.push(`/thankyou?${urlParams.toString()}`);
+      } else {
+        console.error("Error:", response);
+      }
+    } catch (err) {
+      console.error("Error submitting form:", err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <>
-   <div className="relative w-[400px] h-[100px]">
-      {/* Image */}
-      <Image src="/brand.png" alt="rph Logo" width={400} height={100} />
-      
-      {/* Text Overlay */}
-      <div className="absolute bottom-[4rem]  z-10 ">
-        <h1 className="text-green font-bold text-xl">
-        LOWEST PRICE <span className='text-white'>GUARANTEED</span>
-        </h1>
+      <div className="relative w-[400px] h-[100px] hidden md:block">
+        <Image src="/brand.png" alt="brand" width={400} height={100} className="w-[350px] hidden md:block" />
+
+        {/* Text Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center -left-10 -top-16">
+          <h1 className="text-green font-bold md:text-base text-sm text-center">
+            LOWEST PRICE <span className="text-white">GUARANTEED</span>
+          </h1>
+        </div>
       </div>
-    </div>
 
-
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-      <form className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700">
-            Name*
-          </label>
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:ring-blue-500"
-          />
+      <div className="w-full h-24 border-2 border-secondary mb-8 relative">
+        <div className="relative bg-primary text-2xl font-semibold mx-auto bottom-4 px-4 w-[12rem]">Straight 50%</div>
+        <h1 className="text-green font-extrabold flex justify-center items-center text-4xl">DISCOUNT</h1>
+        <div className="relative bg-secondary text-white text-sm md:font-semibold px-2 mx-auto -bottom-2 md:px-4 md:w-[22rem] w-full rounded-md">
+          Up to 20% Additional Discount On Big Orders
         </div>
+      </div>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700">
-            Email Address*
-          </label>
-          <input
-            type="email"
-            placeholder="Email"
-            className="mt-1 block w-full rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:ring-blue-500"
-          />
-        </div>
+      <div className="max-w-md mx-auto p-6 border border-green bg-white rounded-lg shadow-md">
+        <h1 className="text-secondary text-center pb-4 text-2xl font-bold">
+          Act Fast - Save Big!
+        </h1>
 
-        <div>
-          <label className="block text-sm font-medium text-gray-700">
-            Country*
-          </label>
-          <Select
-            options={options}
-            value={country}
-            onChange={handleCountryChange}
-            placeholder="---Select Country---"
-            className="mt-1"
-            styles={{
-              control: (base) => ({
-                ...base,
-                borderColor: '#d1d5db',
-                boxShadow: 'none',
-                '&:hover': { borderColor: '#3b82f6' },
-              }),
-            }}
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700">
-            Phone Number*
-          </label>
-          <PhoneInput
-            country={'us'}
-            value={phone}
-            onChange={setPhone}
-            placeholder="Phone Number"
-            inputStyle={{
-              width: '100%',
-              borderRadius: '0.375rem',
-              borderColor: '#d1d5db',
-            }}
-            containerStyle={{ width: '100%' }}
-          />
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-blue-600 text-white rounded-md py-2 font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-        >
-          Get My Free Quote
-        </button>
-      </form>
-    </div>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium mb-1">Name*</label>
+            <input
+              type="text"
+              placeholder="Your Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full px-4 py-2 border border-secondary rounded-full focus:outline-none focus:ring-1 focus:ring-blue"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Email Address*</label>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-2 rounded-full border border-secondary focus:outline-none focus:ring-1 focus:ring-blue"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Country*</label>
+            <Select
+              options={options}
+              value={country}
+              onChange={handleCountryChange}
+              placeholder="---Select Country---"
+              className="mt-1"
+              styles={{
+                control: (base) => ({
+                  ...base,
+                  borderColor: "#14125c",
+                  boxShadow: "none",
+                  borderRadius: "9999px",
+                }),
+              }}
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Phone Number*</label>
+            <div className="w-full rounded-full border border-secondary">
+              <PhoneInput
+                country={"us"}
+                value={phone}
+                onChange={setPhone}
+                placeholder="Phone Number"
+                inputStyle={{
+                  border: "none",
+                  borderRadius: "9999px",
+                  width: "100%",
+                  paddingLeft: "52px", // Adjust for flag dropdown spacing
+                }}
+                buttonStyle={{
+                  border: "none",
+                  backgroundColor: "transparent",
+                  paddingLeft: "10px", // Adjust as needed
+                }}
+                containerClass="w-full rounded-full"
+                inputClass="w-full rounded-full px-4 py-2"
+                required
+              />
+            </div>
+          </div>
+          <button
+            type="submit"
+            className="w-full bg-blue text-white py-2 rounded-full font-bold hover:bg-blue-700 transition"
+            disabled={isLoading} // Disable button when loading
+          >
+            {isLoading ? "Submitting..." : "Get My Free Quote"}
+          </button>
+        </form>
+      </div>
     </>
   );
 };
 
 export default SignUp;
+

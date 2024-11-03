@@ -189,206 +189,253 @@ import {
   FaLinkedin,
   FaYoutube,
 } from "react-icons/fa";
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <div className="bg-darkBlue">
-      <div className="w-[80%] mx-auto text-white py-8">
+      <div className="md:w-[80%] w-[90%] mx-auto text-white py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-evenly">
             {/* Contact Us */}
             <div className="w-full md:w-1/3 mb-4">
               <h2 className="text-lg font-semibold">CONTACT US</h2>
+              <div>
+                <div>
+                  Call Us:{" "}
+                  <a href="tel:+442038852608" className="hover:underline">
+                    +44 20 3885 2608
+                  </a>
+                </div>
+                <div>
+                  whatsapp Us:{" "}
+                  <a
+                    href={`https://wa.me/447456428217?text=${encodeURIComponent(
+                      "I want to inquire about your services please!"
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    +44 74 5642 8217
+                  </a>
+                </div>
+              </div>
               <p>
-                <a href="tel:+442038852608" className="hover:underline">+44 20 3885 2608</a> | 
-                <a href="tel:+442038852608" className="hover:underline">+44 20 3885 2608</a>
+                <span>
+                  Email Us:{" "}
+                  <a
+                    href="mailto:info@researchpublishinghouse.com"
+                    className="hover:underline"
+                  >
+                    info@researchpublishinghouse.com
+                  </a>
+                </span>
               </p>
-              <p>
-                <a href="mailto:info@scopusjournalservice.com" className="hover:underline">info@scopusjournalservice.com</a>
-              </p>
-              <p>
-                <a href="mailto:supporthead@scopusjournalservice.com" className="hover:underline">supporthead@scopusjournalservice.com</a>
-              </p>
-              <p>
-                <a href="mailto:saleshead@scopusjournalservice.com" className="hover:underline">saleshead@scopusjournalservice.com</a>
-              </p>
-              <p>156 Brynland Ave, BS7 9DY, Bristol, UK</p>
-              
+
+              <p>94 Islington High Street, N1 8EG, London, United Kindgom</p>
             </div>
 
             {/* Social Media */}
             <div className="w-full md:w-1/3 mb-4">
               <h2 className="text-lg font-semibold">SOCIAL MEDIA</h2>
-              <div className="flex space-x-4 mt-2">
-                <FaFacebook className="text-white text-2xl" />
-                <FaInstagram className="text-white text-2xl" />
-                <FaTwitter className="text-white text-2xl" />
-                <FaLinkedin className="text-white text-2xl" />
-                <FaYoutube className="text-white text-2xl" />
+              <div className="flex space-x-4 mt-2 cursor-pointer">
+                <a
+                  href="https://www.facebook.com/researchpublishinghouse/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebook className="text-white text-2xl" />
+                </a>
+                {/* <a href="https://www.instagram.com/your-instagram-link/" target="_blank" rel="noopener noreferrer">
+    <FaInstagram className="text-white text-2xl" />
+  </a>
+  <a href="https://twitter.com/your-twitter-link" target="_blank" rel="noopener noreferrer">
+    <FaTwitter className="text-white text-2xl" />
+  </a>
+  <a href="https://www.linkedin.com/company/your-linkedin-link" target="_blank" rel="noopener noreferrer">
+    <FaLinkedin className="text-white text-2xl" />
+  </a>
+  <a href="https://www.youtube.com/channel/your-youtube-link" target="_blank" rel="noopener noreferrer">
+    <FaYoutube className="text-white text-2xl" />
+  </a> */}
               </div>
             </div>
 
             {/* Countries We Serve */}
-            <div className="w-full md:w-[25%] mb-4">
+            <div className="w-full md:w-[25%] hidden md:block mb-4">
               <h2 className="text-lg font-semibold">COUNTRIES WE SERVE</h2>
               <div className="grid grid-cols-7 mt-2">
                 {/* Replace with actual flag images */}
                 <Image
-              src="/United-Kingdom.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              <Image
-              src="/United-States.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              <Image
-              src="/Canada.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              <Image
-              src="/United-Arab-Emirates.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              <Image
-              src="/Australia.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              <Image
-              src="/Malaysia.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              
-              <Image
-              src="/Germany.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-                
+                  src="/United-Kingdom.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+                <Image
+                  src="/United-States.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+                <Image
+                  src="/Canada.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+                <Image
+                  src="/United-Arab-Emirates.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+                <Image
+                  src="/Australia.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+                <Image
+                  src="/Malaysia.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+
+                <Image
+                  src="/Germany.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+
                 {/* Add more flags as needed */}
               </div>
               <div className="grid grid-cols-7 mt-2">
                 {/* Replace with actual flag images */}
                 <Image
-              src="/Saudi-Arabia.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              <Image
-              src="/Oman.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              <Image
-              src="/Qatar.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              <Image
-              src="/Turkey.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              <Image
-              src="/China.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              <Image
-              src="/Japan.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              
-              <Image
-              src="/India.webp"
-              alt="Logo"
-              width="35"
-              height="35"
-              quality={60}
-              priority
-              className=""
-            />
-              
+                  src="/Saudi-Arabia.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+                <Image
+                  src="/Oman.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+                <Image
+                  src="/Qatar.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+                <Image
+                  src="/Turkey.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+                <Image
+                  src="/China.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+                <Image
+                  src="/Japan.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+
+                <Image
+                  src="/India.webp"
+                  alt="Logo"
+                  width="35"
+                  height="35"
+                  quality={60}
+                  priority
+                  className=""
+                />
+
                 {/* Add more flags as needed */}
               </div>
             </div>
           </div>
 
-          <hr className="border-gray-600 my-6" />
+          <hr className="border-gray-600 my-6 hidden md:block " />
 
           {/* Quick Links */}
-          <div className="flex flex-wrap justify-start space-x-4 text-sm">
-            <a href="#" className="hover:underline">About Us</a>
-            <a href="#" className="hover:underline">Contact Us</a>
-            <a href="#" className="hover:underline">Why Choose Us</a>
-            <a href="#" className="hover:underline">Our Blog</a>
-            <a href="#" className="hover:underline">Privacy Policy</a>
-            <a href="#" className="hover:underline">Terms & Conditions</a>
-            <a href="#" className="hover:underline">FAQs</a>
-            <a href="#" className="hover:underline">Reviews</a>
+          <div className="md:flex hidden flex-wrap justify-start space-x-4 text-sm">
+            <a href="#" className="hover:underline">
+              About Us
+            </a>
+            <a href="#" className="hover:underline">
+              Contact Us
+            </a>
+            <a href="#" className="hover:underline">
+              Why Choose Us
+            </a>
+            <a href="#" className="hover:underline">
+              Our Blog
+            </a>
+            <a href="#" className="hover:underline">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:underline">
+              Terms & Conditions
+            </a>
+            <a href="#" className="hover:underline">
+              FAQs
+            </a>
+            <a href="#" className="hover:underline">
+              Reviews
+            </a>
           </div>
         </div>
       </div>
     </div>
   );
 }
-

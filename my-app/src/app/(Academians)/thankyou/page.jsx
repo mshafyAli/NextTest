@@ -7,8 +7,6 @@ import Navbar from "../../../Components/Navbar";
 import Footer from "../../../Components/Footer";
 import { FaGift } from "react-icons/fa";
 import { TalkBtn } from "../../../Components/TalkBtn";
-import Top from "@/Components/Top";
-import FooterBanner from "@/Components/FooterBanner";
 import Link from "next/link";
 const StickyBtn = dynamic(()=> import('@/Components/StickyBtn'));
 
@@ -23,17 +21,16 @@ const ThankYouPage = () => {
   };
 
   useEffect(() => {
-    document.title = "Thank You - The Academians UK Ltd.";
+    document.title = "Thank You - Research House Publication";
   }, []);
 
   return (
     <>
       <Head>
-        <title>Thank You - The Academians UK Ltd.</title>
+        <title>Thank You - Research House Publication</title>
       </Head>
-      <Top />
       <Navbar />
-      <div className="flex items-center justify-center py-12 px-4">
+      <div className="flex items-center justify-center  pt-[8rem] pb-16 px-4">
         <div className="bg-white max-w-3xl w-full shadow-2xl px-6 py-8 md:px-10 md:py-2">
           <h1 className="text-green font-bold text-2xl md:text-4xl pb-6 pt-12 text-center">
             CONGRATULATIONS
@@ -43,13 +40,13 @@ const ThankYouPage = () => {
             
               <Link href="/">
               <span className="font-bold text-green ">
-                The Academians UK
+                Research House Publication
               </span>
               </Link>
           
             . Your key manager will be connected to you shortly via{" "}
             <a
-              href="tel:+441618189341"
+              href="tel:+442038852608"
               className="text-green font-bold"
               target="_blank"
               rel="noopener noreferrer"
@@ -58,8 +55,8 @@ const ThankYouPage = () => {
             </a>{" "}
             and{" "}
             <a
-              href={`https://wa.me/447397145697?text=${encodeURIComponent(
-                "Hello The Academians, I want to avail my secure promo code TAC-OFF50"
+              href={`https://wa.me/447456428217?text=${encodeURIComponent(
+                "Hello Team RPH, I want to avail my secure promo code RPH-OFF50"
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -78,12 +75,12 @@ const ThankYouPage = () => {
 
           <div className="flex flex-col md:flex-row items-center justify-center md:gap-4 gap-2 py-8 mt-8 ">
             <a
-              href={`https://wa.me/447397145697?text=${encodeURIComponent(
-                "Hello The Academians, I want to avail my secure promo code TAC-OFF50"
+              href={`https://wa.me/447456428217?text=${encodeURIComponent(
+                "Hello Team RPH, I want to avail my secure promo code RPH-OFF50"
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full md:w-[260px] bg-[#408955] h-10 flex items-center justify-center rounded-md"
+              className="w-full md:w-[260px] bg-[#03A84E] h-10 flex items-center justify-center rounded-md"
             >
               <div className="flex items-center gap-2">
                 <FaGift
@@ -104,6 +101,7 @@ const ThankYouPage = () => {
                 width="w-full"
                 mdWidth="md:w-[260px]"
                 label="Talk to our Expert"
+                bgColor=''
               />
             </div>
           </div>
@@ -111,7 +109,7 @@ const ThankYouPage = () => {
       </div>
 
       <Footer aboutRef={aboutRef} contactRef={contactRef} />
-      <FooterBanner/>
+      
       <StickyBtn/>
     </>
   );
