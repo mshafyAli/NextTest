@@ -173,12 +173,13 @@ export default function Navbar() {
       >
         <div className="max-w-[90%] md:max-w-[80%] mx-auto py-4 flex items-center justify-between px-4 md:px-8">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-between">
             <Link href="/" ><Image src="/logo.png" alt="rph Logo" width={100} height={100} /></Link>
           </div>
 
           {/* Contact Info */}
-          <div className="hidden sm:flex items-center space-x-6">
+         <div className="flex items-center gap-4">
+         <div className="hidden sm:flex items-center space-x-6">
             {/* 24/7 Available */}
             <div className="flex items-center space-x-2">
               <FaClockRotateLeft size={20} className="text-green" />
@@ -222,6 +223,7 @@ export default function Navbar() {
           >
             Get A Quote
           </button>
+         </div>
         </div>
       </div>
       <DiscountModal isOpen={isModalOpen} onClose={closeModal} />

@@ -13,10 +13,10 @@ import TwoButtons from "./TwoButtons";
 const Banner = () => {
   
   return (
-    <div className=" bg-primary w-full h-auto pt-20 md:pb-12 pb-8">
-      <div className=" h-auto w-full">
-        <div className="md:w-[80%] w-[95%] mx-auto px-4 md:py-10 py-6 ">
-          <div className="flex flex-col items-start md:flex-row gap-12 md:gap-20 lg:gap-20">
+    <div className=" bg-primary w-full h-auto pt-20 md:pb-12 pb-8 ">
+      <div className="">
+        <div className="md:w-[80%] w-[95%] mx-auto px-4 md:py-10 py-6">
+          <div className="flex flex-col items-start md:flex-row gap-4 md:gap-20 lg:gap-20">
             {/* Left Container */}
             <div className="md:w-[50%] w-full">
               <div className="bg-white w-[120px] py-2 px-2 rounded-md  border-2 border-green font-medium text-xl  uppercase ">
@@ -69,7 +69,7 @@ const Banner = () => {
                 <div className="bg-secondary  md:w-[13rem] h-14 p-2 rounded-md ">
                   <div className="flex items-center justify-start gap-1 h-full">
                     <div>
-                    <Image src="/logo.png" alt="rph Logo" width={50} height={50} />
+                    <Image src="/favicon.png" alt="rph Logo" width={60} height={60} />
                     </div>
                     <div className="flex flex-col items-start">
                       <div className="flex items-center gap-1 text-white">

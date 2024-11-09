@@ -10,6 +10,7 @@ import countryList from "react-select-country-list";
 import Select from "react-select";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import Image from "next/image"
 
 
 const DiscountModal = ({ isOpen, onClose }) => {
@@ -79,10 +80,7 @@ const DiscountModal = ({ isOpen, onClose }) => {
         </button>
 
         {/* Banner */}
-        <div className="flex items-center justify-between bg-blue-800 text-secondary p-3 rounded-t-lg">
-          <span className="text-lg font-bold">50% DISCOUNT</span>
-          <span className="text-sm bg-green-500 px-2 py-1 rounded-lg">UP TO 20% EXTRA DISCOUNT ON BIG ORDERS</span>
-        </div>
+        <div className="flex justify-center ">   <Image src="/discount.png" alt="Discount" width={460} height={100} className="" /></div>
 
         {/* Form */}
         <div className="p-4 border-t border-gray-200">

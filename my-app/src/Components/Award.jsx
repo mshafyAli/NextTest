@@ -127,7 +127,8 @@ const Award = () => {
   ];
 
   return (
-    <div className="bg-grey w-full h-auto mb-12 relative">
+    <div className="bg-grey w-full h-auto mb-12  ">
+      <div className="relative">
       <div className="md:w-[80%] w-[90%] mx-auto pt-6">
         {/* Container for Award image and heading */}
         <div className="relative flex flex-col items-center">
@@ -138,7 +139,7 @@ const Award = () => {
         </div>
 
         {/* Award items */}
-        <div className="hidden md:flex md:w-[80%] w-full mx-auto pt-10">
+        <div className="hidden md:flex md:w-[80%] w-full mx-auto pt-10 ">
           {awards.map((award, index) => (
             <div
               key={index}
@@ -156,14 +157,14 @@ const Award = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 md:w-[80%] md:hidden w-full mx-auto pt-10">
+        {/* <div className="grid grid-cols-2 md:w-[80%] md:hidden w-full mx-auto pt-10 ">
           {awards.map((award, index) => (
             <div
               key={index}
               className="w-[200px] py-2 px-4 md:border-b md:border-r flex flex-col justify-center items-center border-gray-200"
             >
               {award.imageSrc ? (
-                <Image src={award.imageSrc} alt={award.title} width={70} height={70} />
+                <Image src={award.imageSrc} alt={award.title} className="" width={70} height={70} />
               ) : (
                 <h1 className="font-bold">{award.title}</h1>
               )}
@@ -172,30 +173,11 @@ const Award = () => {
               </h2>
             </div>
           ))}
-        </div> 
+        </div>  */}
 
 
 
-        <div className="md:flex hidden md:w-[80%] w-full mx-auto pb-20">
-          {awards2.map((award, index) => (
-            <div
-              key={index}
-              className="w-[200px] py-2 px-4 border-b border-r flex flex-col justify-center items-center border-gray-200"
-            >
-              {award.imageSrc ? (
-                <Image src={award.imageSrc} alt={award.title} width={70} height={70} />
-              ) : (
-                <h1 className="font-bold">{award.title}</h1>
-              )}
-              <h2 className="text-secondary text-center pt-2 font-semibold">
-                {award.subtitle || award.title}
-              </h2>
-            </div>
-          ))}
-        </div>
-
-
-        <div className="grid grid-cols-2 md:hidden md:w-[80%] w-full mx-auto pb-20">
+        <div className="flex flex-col md:flex-row items-center md:items-baseline  md:w-[80%] w-full mx-auto pb-20 ">
           {awards2.map((award, index) => (
             <div
               key={index}
@@ -212,6 +194,25 @@ const Award = () => {
             </div>
           ))}
         </div>
+
+
+        {/* <div className="grid grid-cols-2 md:hidden md:w-[80%] w-full mx-auto pb-20 ">
+          {awards2.map((award, index) => (
+            <div
+              key={index}
+              className="w-[200px] py-2 px-4 md:border-b md:border-r flex flex-col justify-center items-center border-gray-200"
+            >
+              {award.imageSrc ? (
+                <Image src={award.imageSrc}  alt={award.title} width={70} height={70} />
+              ) : (
+                <h1 className="font-bold">{award.title}</h1>
+              )}
+              <h2 className="text-secondary text-center pt-2 font-semibold">
+                {award.subtitle || award.title}
+              </h2>
+            </div>
+          ))}
+        </div> */}
       </div>
 
       {/* Background banner image positioned at the bottom-right */}
@@ -222,6 +223,7 @@ const Award = () => {
         height={300}
         className="absolute bottom-0 right-0"
       />
+      </div>
     </div>
   );
 };

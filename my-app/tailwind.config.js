@@ -9,6 +9,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      
       colors: {
         'primary': '#F9ECF3',
         'secondary': "#14125C",
@@ -17,7 +18,6 @@ module.exports = {
         "grey": "#F5F7FA",
         "blue": "#123DCD",
         "darkBlue": "#14125C",
-        
       },
       
       keyframes: {
@@ -40,6 +40,10 @@ module.exports = {
         blink: 'blink 0.3s infinite',
         darkLight: 'darkLight 0.5s infinite', // Define the animation duration
       },
+    backgroundImage:{
+      'bgSelf' : "url('/back-carousel.webp')",
+      'bgImage' : "url('/bgImage.webp')"
+    }
     },
   },
   plugins: [],

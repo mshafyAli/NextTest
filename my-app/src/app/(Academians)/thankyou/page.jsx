@@ -9,6 +9,7 @@ import { FaGift } from "react-icons/fa";
 import { TalkBtn } from "../../../Components/TalkBtn";
 import Link from "next/link";
 const StickyBtn = dynamic(()=> import('@/Components/StickyBtn'));
+const SingleButton = dynamic(()=> import('@/Components/SingleButton'));
 
 const ThankYouPage = () => {
   const aboutRef = useRef(null);
@@ -20,14 +21,35 @@ const ThankYouPage = () => {
     router.push(`${path}${hash}`);
   };
 
+  // useEffect(() => {
+  //   document.title = "Thank You - Research House Publication";
+  // }, []);
+
+
   useEffect(() => {
-    document.title = "Thank You - Research House Publication";
+    document.title = "Thank You - Research House Publication.";
+
+    // Wait for Tawk.to to load and check if Tawk_API is available
+    const initializeTawk = () => {
+      if (window && window.Tawk_API) {
+        window.Tawk_API.setAttributes({ pageTitle: document.title });
+        window.Tawk_API.toggle();
+        window.Tawk_API.toggle(); // Toggling twice to refresh Tawk.to's state
+        clearInterval(tawkInterval); // Clear interval once Tawk.to is initialized
+      }
+    };
+
+    // Check every 500ms if Tawk_API is loaded, stop after 5 seconds (10 attempts)
+    const tawkInterval = setInterval(initializeTawk, 500);
+    setTimeout(() => clearInterval(tawkInterval), 5000);
+
+    return () => clearInterval(tawkInterval); // Clean up the interval on component unmount
   }, []);
 
   return (
     <>
       <Head>
-        <title>Thank You - Research House Publication</title>
+        <title>Thank You - Research House Publication.</title>
       </Head>
       <Navbar />
       <div className="flex items-center justify-center  pt-[8rem] pb-16 px-4">
@@ -107,7 +129,8 @@ const ThankYouPage = () => {
           </div>
         </div>
       </div>
-
+      
+      <SingleButton/>
       <Footer aboutRef={aboutRef} contactRef={contactRef} />
       
       <StickyBtn/>

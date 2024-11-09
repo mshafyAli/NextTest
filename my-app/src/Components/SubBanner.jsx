@@ -8,7 +8,7 @@ import { FaUsers, FaEdit, FaBriefcase, FaUserTie } from 'react-icons/fa';
 export default function subBanner() {
   return (
     <div className='bg-grey'>
-        <div className="md:w-[80%] w-full mx-auto flex   flex-col md:flex-row md:justify-between items-center justify-center gap-4 md:gap-0  p-6">
+        <div className="md:w-[70%] w-full mx-auto flex   flex-col md:flex-row md:justify-between items-center justify-center gap-4 md:gap-0  p-6">
       {/* Feature Item */}
       <FeatureItem
         icon={<FaUsers className="text-green text-3xl" />}

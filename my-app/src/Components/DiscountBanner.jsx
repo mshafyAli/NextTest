@@ -7,6 +7,7 @@ import Select from "react-select";
 import countryList from "react-select-country-list";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import DiscountModal from "./DiscountModel";
 
 
 const DiscountBanner = () => {
@@ -17,6 +18,9 @@ const DiscountBanner = () => {
   const [isLoading, setIsLoading] = useState(false); // Loading state
   const options = countryList().getData();
   const router = useRouter();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const handleCountryChange = (selectedCountry) => {
     setCountry(selectedCountry);
@@ -63,6 +67,7 @@ const DiscountBanner = () => {
     }
   };
   return (
+    <>
     <div className="bg-darkBlue w-full h-auto  my-12">
       <div className="md:w-[80%] w-[90%] mx-auto">
         <div className="flex flex-col md:gap-12 gap-4 lg:flex-row items-center justify-center py-8  text-white ">
@@ -77,7 +82,7 @@ const DiscountBanner = () => {
               to get it published in a professional manner.
             </p>
             <div className="flex items-center flex-col md:flex-row gap-4 h-full">
-              <button className="bg-white text-[#0A0E52] px-6 py-2 rounded-full hover:bg-blue hover:text-white">
+              <button className="bg-white text-[#0A0E52] px-6 py-2 rounded-full hover:bg-blue hover:text-white"   onClick={openModal}>
                 Let&apos;s Discuss!
               </button>
               <a
@@ -183,7 +188,9 @@ const DiscountBanner = () => {
                     
                 </div> */}
       </div>
+      <DiscountModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
+    </>
   );
 };
 

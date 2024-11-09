@@ -34,22 +34,22 @@ const StickyBtn = () => {
   <div className="flex gap-1 py-2 px-2">
     <div className="flex-1">
       
-          <div className="bg-secondary w-full h-16 flex justify-center rounded-md ">
+          <div className="bg-green w-full h-16 flex justify-center rounded-md ">
         <div className="flex items-center gap-1 px-4 w-full  ">
-          <IoLogoWhatsapp className="text-3xl text-secondary"  />
-          <h1 className="text-secondary font-bold text-xl">WhatsApp</h1>
+          <IoLogoWhatsapp className="text-3xl text-green"  />
+          <h1 className="text-green font-bold text-xl">WhatsApp</h1>
         </div>
       </div>
        
      
     </div>
     <div className="flex-1">
-   <a href={`https://wa.me/447397145697?text=${encodeURIComponent(
-          "Hello The Academians, I want to inquire about your services please!"
+   <a href={`https://wa.me/447456428217?text=${encodeURIComponent(
+          "I want to inquire about your services please!"
         )}`}
         target="_blank"
         rel="noopener noreferrer">
-   <div className="bg-green w-full h-16 flex justify-center rounded-md border">
+   <div className="bg-[#023838] w-full h-16 flex justify-center rounded-md border">
           <div className="flex items-center gap-1 px-4 w-full ">
             <IoLogoWhatsapp className="text-3xl" color="white" />
             <h1 className="text-white font-bold text-xl">WhatsApp</h1>

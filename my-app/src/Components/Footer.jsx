@@ -190,11 +190,12 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="bg-darkBlue">
-      <div className="md:w-[80%] w-[90%] mx-auto text-white py-8">
+    <div className="bg-darkBlue w-full">
+      <div className="md:w-[80%] w-[90%] mx-auto text-white pt-8 pb-20 md:pb-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-evenly">
             {/* Contact Us */}
@@ -409,9 +410,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="md:flex hidden flex-wrap justify-start space-x-4 text-sm">
-            <a href="#" className="hover:underline">
+            <Link href="/about-us" className="hover:underline">
               About Us
-            </a>
+            </Link>
             <a href="#" className="hover:underline">
               Contact Us
             </a>
@@ -421,18 +422,18 @@ export default function Footer() {
             <a href="#" className="hover:underline">
               Our Blog
             </a>
-            <a href="#" className="hover:underline">
+            <Link href="/privacy-policy" className="hover:underline">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:underline">
+            </Link>
+            <Link href="/term-and-condition" className="hover:underline">
               Terms & Conditions
-            </a>
+            </Link>
             <a href="#" className="hover:underline">
               FAQs
             </a>
-            <a href="#" className="hover:underline">
+            <Link href="/reviews" className="hover:underline">
               Reviews
-            </a>
+            </Link>
           </div>
         </div>
       </div>
